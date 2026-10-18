@@ -37,7 +37,9 @@ RECALL_TARGET = 0.98                          # minimum TP retention
 SEED = 42
 GOLDEN_SIZE = 100
 GOLDEN_REAL_SHARE = 0.5
-GOLDEN_API_CATEGORY_SHARE = 0.25              # weakrand/hash/crypto/securecookie
+# Semgrep raises no false alarms in the API categories, so they can only supply real items:
+# all false positives come from dataflow categories, and API items fill this share of the real half.
+GOLDEN_API_SHARE_OF_REAL = 0.25               # weakrand/hash/crypto/securecookie
 DATAFLOW_CATEGORIES = ("sqli", "xss", "cmdi", "pathtraver", "ldapi", "xpathi", "trustbound")
 API_CATEGORIES = ("weakrand", "hash", "crypto", "securecookie")
 

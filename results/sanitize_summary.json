@@ -1,0 +1,41 @@
+{
+  "benchmark_sha": "bc5ffeb09fb18ab039806d84ca1f718c2e332c54",
+  "seed": 42,
+  "java_files_sanitized": 2766,
+  "test_cases": 2740,
+  "literal_changes_by_kind": {
+    "identity": 6822,
+    "neutralised": 5063,
+    "config_key": 133
+  },
+  "behaviour_flags": {
+    "comparison/identity": 472
+  },
+  "ast_and_line_check": {
+    "ok": 2766,
+    "failed": 0
+  },
+  "leak_scan": {
+    "files_scanned": 2747,
+    "hits_by_pattern": {
+      "BenchmarkTest": 0,
+      "owasp (outside org.owasp.esapi)": 0,
+      "benchmark": 0,
+      "hint literal": 0,
+      "user name / Safe<Name>": 0,
+      "harness message": 0,
+      "category servlet path": 0,
+      "original config key": 0,
+      "hint words (safe|never|always|should)": 0,
+      "comments (tree-sitter)": 0
+    },
+    "total_hits": 0
+  },
+  "compile": {
+    "status": "ok",
+    "javac_release": 8,
+    "files": 2766,
+    "exit_code": 0,
+    "errors": 0
+  }
+}

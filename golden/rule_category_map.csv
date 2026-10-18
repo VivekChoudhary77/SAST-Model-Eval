@@ -1,0 +1,53 @@
+rule,rule_id,cwe,category,basis,findings
+anonymous-ldap-bind,java.lang.security.audit.anonymous-ldap-bind.anonymous-ldap-bind,287,,no benchmark category for this CWE,0
+bad-hexa-conversion,java.lang.security.audit.bad-hexa-conversion.bad-hexa-conversion,704,,no benchmark category for this CWE,0
+cookie-missing-httponly,java.lang.security.audit.cookie-missing-httponly.cookie-missing-httponly,1004,,no benchmark category for this CWE,0
+crlf-injection-logs,java.lang.security.audit.crlf-injection-logs.crlf-injection-logs,93,,no benchmark category for this CWE,0
+defaulthttpclient-is-deprecated,java.lang.security.audit.crypto.ssl.defaulthttpclient-is-deprecated.defaulthttpclient-is-deprecated,326,,no benchmark category for this CWE,0
+el-injection,java.lang.security.audit.el-injection.el-injection,94,,no benchmark category for this CWE,0
+http-response-splitting,java.lang.security.audit.http-response-splitting.http-response-splitting,113,,no benchmark category for this CWE,0
+insecure-hostname-verifier,java.lang.security.audit.crypto.ssl.insecure-hostname-verifier.insecure-hostname-verifier,295,,no benchmark category for this CWE,0
+insecure-smtp-connection,java.lang.security.audit.insecure-smtp-connection.insecure-smtp-connection,297,,no benchmark category for this CWE,0
+insecure-trust-manager,java.lang.security.audit.crypto.ssl.insecure-trust-manager.insecure-trust-manager,295,,no benchmark category for this CWE,0
+no-static-initialization-vector,java.lang.security.audit.crypto.no-static-initialization-vector.no-static-initialization-vector,329,,no benchmark category for this CWE,0
+object-deserialization,java.lang.security.audit.object-deserialization.object-deserialization,502,,no benchmark category for this CWE,0
+overly-permissive-file-permission,java.lang.security.audit.overly-permissive-file-permission.overly-permissive-file-permission,276,,no benchmark category for this CWE,0
+permissive-cors,java.lang.security.audit.permissive-cors.permissive-cors,183,,no benchmark category for this CWE,0
+rsa-no-padding,java.lang.security.audit.crypto.rsa-no-padding.rsa-no-padding,326,,no benchmark category for this CWE,0
+script-engine-injection,java.lang.security.audit.script-engine-injection.script-engine-injection,94,,no benchmark category for this CWE,0
+server-dangerous-object-deserialization,java.rmi.security.server-dangerous-object-deserialization.server-dangerous-object-deserialization,502,,no benchmark category for this CWE,0
+spel-injection,java.spring.security.audit.spel-injection.spel-injection,94,,no benchmark category for this CWE,0
+spring-csrf-disabled,java.spring.security.audit.spring-csrf-disabled.spring-csrf-disabled,352,,no benchmark category for this CWE,0
+spring-unvalidated-redirect,java.spring.security.audit.spring-unvalidated-redirect.spring-unvalidated-redirect,601,,no benchmark category for this CWE,0
+unencrypted-socket,java.lang.security.audit.crypto.unencrypted-socket.unencrypted-socket,319,,no benchmark category for this CWE,0
+unrestricted-request-mapping,java.spring.security.unrestricted-request-mapping.unrestricted-request-mapping,352,,no benchmark category for this CWE,0
+unvalidated-redirect,java.lang.security.audit.unvalidated-redirect.unvalidated-redirect,601,,no benchmark category for this CWE,0
+url-rewriting,java.lang.security.audit.url-rewriting.url-rewriting,200,,no benchmark category for this CWE,0
+weak-ssl-context,java.lang.security.audit.weak-ssl-context.weak-ssl-context,326,,no benchmark category for this CWE,0
+xml-decoder,java.lang.security.audit.xml-decoder.xml-decoder,611,,no benchmark category for this CWE,0
+xmlinputfactory-external-entities-enabled,java.lang.security.xmlinputfactory-external-entities-enabled.xmlinputfactory-external-entities-enabled,611,,no benchmark category for this CWE,0
+xmlinputfactory-possible-xxe,java.lang.security.xmlinputfactory-possible-xxe.xmlinputfactory-possible-xxe,611,,no benchmark category for this CWE,0
+command-injection-formatted-runtime-call,java.lang.security.audit.command-injection-formatted-runtime-call.command-injection-formatted-runtime-call,78,cmdi,cwe,0
+tainted-cmd-from-http-request,java.lang.security.audit.tainted-cmd-from-http-request.tainted-cmd-from-http-request,78,cmdi,cwe,221
+avoid-implementing-custom-digests,java.lang.security.audit.crypto.ssl.avoid-implementing-custom-digests.avoid-implementing-custom-digests,327,crypto,cwe,0
+cbc-padding-oracle,java.lang.security.audit.cbc-padding-oracle.cbc-padding-oracle,327,crypto,cwe,0
+des-is-deprecated,java.lang.security.audit.crypto.des-is-deprecated.des-is-deprecated,326,crypto,"override: Tagged CWE-326 (inadequate strength) but flags DES ciphers, which is the benchmark's weak-cipher category (CWE-327)",171
+desede-is-deprecated,java.lang.security.audit.crypto.desede-is-deprecated.desede-is-deprecated,326,crypto,override: Tagged CWE-326 but flags Triple-DES ciphers; same weak-cipher category as above,130
+no-null-cipher,java.lang.security.audit.crypto.no-null-cipher.no-null-cipher,327,crypto,cwe,0
+use-of-md5,java.lang.security.audit.crypto.use-of-md5.use-of-md5,328,hash,cwe,28
+use-of-sha1,java.lang.security.audit.crypto.use-of-sha1.use-of-sha1,328,hash,cwe,85
+ldap-entry-poisoning,java.lang.security.audit.ldap-entry-poisoning.ldap-entry-poisoning,90,ldapi,cwe,0
+ldap-injection,java.lang.security.audit.ldap-injection.ldap-injection,90,ldapi,cwe,0
+tainted-ldapi-from-http-request,java.lang.security.audit.tainted-ldapi-from-http-request.tainted-ldapi-from-http-request,90,ldapi,cwe,54
+httpservlet-path-traversal,java.lang.security.httpservlet-path-traversal.httpservlet-path-traversal,22,pathtraver,cwe,288
+jax-rs-path-traversal,java.jax-rs.security.jax-rs-path-traversal.jax-rs-path-traversal,22,pathtraver,cwe,0
+cookie-missing-secure-flag,java.lang.security.audit.cookie-missing-secure-flag.cookie-missing-secure-flag,614,securecookie,cwe,36
+formatted-sql-string,java.lang.security.audit.formatted-sql-string.formatted-sql-string,89,sqli,cwe,0
+jdbc-sql-formatted-string,java.lang.security.audit.jdbc-sql-formatted-string.jdbc-sql-formatted-string,89,sqli,cwe,0
+tainted-sql-from-http-request,java.lang.security.audit.sqli.tainted-sql-from-http-request.tainted-sql-from-http-request,89,sqli,cwe,388
+tainted-session-from-http-request,java.lang.security.audit.tainted-session-from-http-request.tainted-session-from-http-request,501,trustbound,cwe,61
+weak-random,java.lang.security.audit.crypto.weak-random.weak-random,330,weakrand,cwe,218
+tainted-xpath-from-http-request,java.lang.security.audit.tainted-xpath-from-http-request.tainted-xpath-from-http-request,643,xpathi,cwe,27
+no-direct-response-writer,java.lang.security.audit.xss.no-direct-response-writer.no-direct-response-writer,79,xss,cwe,456
+servletresponse-writer-xss,java.lang.security.servletresponse-writer-xss.servletresponse-writer-xss,79,xss,cwe,0
+xssrequestwrapper-is-insecure,java.lang.security.audit.xssrequestwrapper-is-insecure.xssrequestwrapper-is-insecure,79,xss,cwe,0
