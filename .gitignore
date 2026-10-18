@@ -1,0 +1,15 @@
+# Python / uv
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Secrets
+.env
+
+# GPL-2.0 benchmark and anything derived from its code (never commit)
+data/
+prompts/
+
+# Raw model responses and spend ledger (responses can quote code)
+cache/
