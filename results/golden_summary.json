@@ -1,0 +1,61 @@
+{
+  "seed": 42,
+  "prompt_version": "v1",
+  "size": 100,
+  "by_part": {
+    "false_positive": 50,
+    "real_dataflow": 38,
+    "real_api": 12
+  },
+  "by_category_label_tier": {
+    "cmdi|false_positive|brutal": 4,
+    "cmdi|false_positive|hard": 5,
+    "cmdi|real|easy": 1,
+    "cmdi|real|hard": 4,
+    "crypto|real|brutal": 1,
+    "crypto|real|easy": 2,
+    "hash|real|easy": 2,
+    "ldapi|false_positive|brutal": 1,
+    "ldapi|false_positive|hard": 2,
+    "ldapi|real|hard": 1,
+    "pathtraver|false_positive|brutal": 4,
+    "pathtraver|false_positive|hard": 6,
+    "pathtraver|real|easy": 2,
+    "pathtraver|real|hard": 4,
+    "securecookie|real|easy": 2,
+    "sqli|false_positive|brutal": 2,
+    "sqli|false_positive|hard": 12,
+    "sqli|real|easy": 3,
+    "sqli|real|hard": 9,
+    "trustbound|false_positive|hard": 2,
+    "trustbound|real|easy": 1,
+    "trustbound|real|hard": 1,
+    "weakrand|real|easy": 5,
+    "xpathi|false_positive|hard": 1,
+    "xpathi|real|hard": 2,
+    "xss|false_positive|brutal": 1,
+    "xss|false_positive|easy": 4,
+    "xss|false_positive|hard": 6,
+    "xss|real|brutal": 1,
+    "xss|real|easy": 5,
+    "xss|real|hard": 4
+  },
+  "items_with_context": 34,
+  "prompt_chars": {
+    "system": 1946,
+    "user_mean": 3784,
+    "user_max": 7342
+  },
+  "approx_input_tokens_mean": 1637,
+  "prompt_leak_scan": {
+    "BenchmarkTest": 0,
+    "owasp (outside org.owasp.esapi)": 0,
+    "benchmark": 0,
+    "hint literal": 0,
+    "user name / Safe<Name>": 0,
+    "harness message": 0,
+    "category servlet path": 0,
+    "original config key": 0,
+    "hint words (safe|never|always|should)": 0
+  }
+}

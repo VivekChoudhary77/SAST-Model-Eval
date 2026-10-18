@@ -24,6 +24,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import config  # noqa: E402
 from triage import sanitize as S  # noqa: E402
+from triage.leaks import LEAK_PATTERNS  # noqa: E402
 
 SRC_ROOT = config.BENCHMARK_DIR / "src/main/java/org/owasp/benchmark"
 OUT_JAVA = config.SANITIZED_DIR / "java"
@@ -33,18 +34,6 @@ REPORTS = config.DATA_DIR / "reports"
 
 # Helpers whose full source can reach a prompt. Utils is excluded: only referenced methods are extracted (Phase 3).
 CONTEXT_HELPERS = ["ThingInterface", "Thing1", "Thing2", "ThingFactory", "SeparateClassRequest"]
-
-LEAK_PATTERNS = {
-    "BenchmarkTest": re.compile(r"BenchmarkTest"),
-    "owasp (outside org.owasp.esapi)": re.compile(r"(?i)\bowasp\b(?!\s*\.\s*esapi\b)"),
-    "benchmark": re.compile(r"(?i)benchmark"),
-    "hint literal": re.compile("|".join(re.escape(f'"{h}"') for h in sorted(S.HINT_LITERALS))),
-    "user name / Safe<Name>": re.compile(r'"(Safe[A-Z][a-z]+|' + "|".join(sorted(S.USER_NAMES)) + r')"'),
-    "harness message": re.compile(r"Test ?Case|Randomness Test|Hash Test|Crypto Test|Problem executing|secure flag set"),
-    "category servlet path": re.compile(r"/(cmdi|crypto|hash|ldapi|pathtraver|securecookie|sqli|trustbound|weakrand|xpathi|xss)-\d\d/"),
-    "original config key": re.compile(r"\b(hash|crypto)Alg[12]\b"),
-    "hint words (safe|never|always|should)": re.compile(r"(?i)safe|never|always|should"),
-}
 
 _COMPARE = r'(?:\.\s*(?:equals|equalsIgnoreCase|contains|startsWith|endsWith|indexOf)\(\s*"{t}"\s*[,)])' \
            r'|(?:"{t}"\s*\.\s*(?:equals|equalsIgnoreCase|contains|startsWith|endsWith|indexOf)\s*\()' \

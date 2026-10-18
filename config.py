@@ -43,6 +43,22 @@ GOLDEN_API_SHARE_OF_REAL = 0.25               # weakrand/hash/crypto/securecooki
 DATAFLOW_CATEGORIES = ("sqli", "xss", "cmdi", "pathtraver", "ldapi", "xpathi", "trustbound")
 API_CATEGORIES = ("weakrand", "hash", "crypto", "securecookie")
 
+# --- Candidate models (final 5 chosen after the smoke test) --------------------
+CANDIDATE_MODELS = {
+    "chinese_open_weight": [
+        "deepseek/deepseek-v4-pro", "deepseek/deepseek-v4-flash", "qwen/qwen3.8-27b", "qwen/qwen3.5-397b-a17b",
+        "z-ai/glm-5.3", "moonshotai/kimi-k2.6", "minimax/minimax-m3",
+    ],
+    "anthropic": ["anthropic/claude-haiku-5.5", "anthropic/claude-sonnet-5.5", "anthropic/claude-opus-5.5"],
+    "xai": ["x-ai/grok-4.7", "x-ai/grok-4.3"],
+    "openai": ["openai/gpt-6-luna", "openai/gpt-6-sol", "openai/gpt-5.6-luna"],
+}
+SMOKE_MODEL = "deepseek/deepseek-v4-pro"
+SMOKE_SIZE = 5
+# Each model is pinned to one provider endpoint (cheapest that supports reasoning + structured outputs),
+# skipping low-precision builds so one model's results never mix quantizations.
+EXCLUDED_QUANTIZATIONS = ("fp4", "int4")
+
 # --- Model calls -------------------------------------------------------------
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 REASONING_EFFORT = "low"                      # same capped effort for every model
@@ -50,3 +66,6 @@ MAX_TOKENS = 2_000
 SPEND_CAP_USD = 7.00                          # hard abort before cumulative spend exceeds this
 RETRY_MAX_ATTEMPTS = 5
 RETRY_BASE_DELAY_S = 2.0
+REQUEST_TIMEOUT_S = 300
+CHARS_PER_TOKEN_ESTIMATE = 3.0                # conservative (code tokenizes densely); only for pre-call estimates
+PRICING_CSV = RESULTS_DIR / "pricing.csv"
