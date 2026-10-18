@@ -2,7 +2,8 @@
 
 For each candidate: list its provider endpoints, keep those that support reasoning + structured outputs
 (and enough output tokens, and not a low-precision build), and pin the cheapest. The ':batch' variant price
-is recorded alongside. If the smoke test has run, a monthly cost projection from measured tokens is added.
+is recorded alongside. If the smoke test has run, a monthly cost projection from measured tokens is added,
+with sync cost (what the eval pays) and batch cost (a production option) in separate columns.
 
 Outputs (committed):
   results/pricing.csv           model, slot, open weights, pinned endpoint, sync and batch $/M tokens
@@ -110,17 +111,19 @@ def main() -> None:
                            f"assumed from {config.SMOKE_MODEL}" if measured else "assumed" for k in keys]
     proj["sync_per_alert"] = (proj.tokens_in * proj.in_per_m + proj.tokens_out * proj.out_per_m) / PER_M
     proj["batch_per_alert"] = (proj.tokens_in * proj.batch_in_per_m + proj.tokens_out * proj.batch_out_per_m) / PER_M
-    proj["best_per_alert"] = proj[["sync_per_alert", "batch_per_alert"]].min(axis=1)
+    # The eval runs sync; batch prices are shown separately as a production option (latency doesn't matter).
     for mult in config.VOLUME_SENSITIVITY:
-        proj[f"monthly_x{mult}"] = proj.best_per_alert * config.ALERTS_PER_MONTH * mult
-    proj["within_budget_x1"] = proj.monthly_x1 <= config.MONTHLY_BUDGET_USD
+        proj[f"monthly_sync_x{mult}"] = proj.sync_per_alert * config.ALERTS_PER_MONTH * mult
+        proj[f"monthly_batch_x{mult}"] = proj.batch_per_alert * config.ALERTS_PER_MONTH * mult
+    proj["within_budget_sync_x1"] = proj.monthly_sync_x1 <= config.MONTHLY_BUDGET_USD
     if (config.RESULTS_DIR / "smoke_test.csv").exists():
         proj.to_csv(config.RESULTS_DIR / "cost_projection.csv", index=False)
 
     pd.set_option("display.width", 250)
     print(f"Prices fetched {fetched}\n")
     cols = ["slot", "model", "endpoint", "reasoning_effort", "in_per_m", "out_per_m", "batch_in_per_m", "batch_out_per_m",
-            "tokens_in", "tokens_out", "token_basis", "best_per_alert"] + [f"monthly_x{m}" for m in config.VOLUME_SENSITIVITY]
+            "tokens_in", "tokens_out", "token_basis", "sync_per_alert"] + \
+           [f"monthly_{r}_x{m}" for m in config.VOLUME_SENSITIVITY for r in ("sync", "batch")]
     print(proj[cols].to_string(index=False, float_format=lambda x: f"{x:,.4f}" if x < 1 else f"{x:,.0f}"))
     print(f"\nScenario: {config.ALERTS_PER_MONTH:,} alerts/month; budget ${config.MONTHLY_BUDGET_USD:,.0f}/month")
 

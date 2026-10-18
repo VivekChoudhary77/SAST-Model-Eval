@@ -53,6 +53,10 @@ CANDIDATE_MODELS = {
     "xai": ["x-ai/grok-4.7", "x-ai/grok-4.3"],
     "openai": ["openai/gpt-6-luna", "openai/gpt-6-sol", "openai/gpt-5.6-luna"],
 }
+# Models in the full eval (Phase 6). Every model runs sync; :batch prices appear only in the cost projection.
+EVAL_MODELS = [
+    "deepseek/deepseek-v4-pro", "z-ai/glm-5.3", "anthropic/claude-sonnet-5.5", "x-ai/grok-4.7", "openai/gpt-6-sol",
+]
 SMOKE_MODEL = "deepseek/deepseek-v4-pro"
 SMOKE_SIZE = 5
 # Each model is pinned to one provider endpoint (cheapest that supports reasoning + structured outputs),

@@ -15,13 +15,9 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import config  # noqa: E402
-from triage import parsing, prompts  # noqa: E402
+from triage import prompts  # noqa: E402
+from triage.runner import RESULT_COLUMNS, load_golden, result_row  # noqa: E402
 from triage.client import BudgetExceeded, CallConfig, TriageClient, credits_remaining  # noqa: E402
-
-RESULT_COLUMNS = ["alert_id", "model", "endpoint", "reasoning_effort", "provider", "category", "real_vulnerability", "tier", "status",
-                  "verdict", "confidence", "correct", "failure", "prompt_tokens", "completion_tokens",
-                  "reasoning_tokens", "cost", "cost_source", "latency_s", "finish_reason", "from_cache"]
-
 
 def pick_alerts(golden: pd.DataFrame, n: int) -> pd.DataFrame:
     """A small mix: 2 false positives, 2 real dataflow, 1 real API alert (the first n of them)."""
@@ -38,7 +34,7 @@ def main() -> None:
     ap.add_argument("--execute", action="store_true", help="make the paid calls (default: dry run)")
     args = ap.parse_args()
 
-    golden = pd.read_csv(config.GOLDEN_DIR / "golden_set.csv", dtype={"lines": str, "cwe": str}, keep_default_na=False)
+    golden = load_golden(config.GOLDEN_DIR / "golden_set.csv")
     alerts = pick_alerts(golden, args.n)
     client = TriageClient(phase="smoke")
     if args.endpoint:
@@ -68,16 +64,9 @@ def main() -> None:
     try:
         for a in alerts.itertuples():
             rec = client.complete(args.model, a.handler, cfg, user_prompts[a.handler])
-            p = parsing.parse(rec)
-            correct = None if p.status != "ok" else (p.verdict == "real") == bool(a.real_vulnerability)
-            rows.append({"alert_id": a.handler, "model": args.model, "endpoint": ep.endpoint,
-                         "reasoning_effort": rec.get("reasoning_effort"),
-                         "provider": rec.get("provider"), "category": a.category,
-                         "real_vulnerability": a.real_vulnerability, "tier": a.tier, "status": p.status,
-                         "verdict": p.verdict, "confidence": p.confidence, "correct": correct, "failure": p.failure,
-                         **{k: rec.get(k) for k in ["prompt_tokens", "completion_tokens", "reasoning_tokens", "cost",
-                                                    "cost_source", "latency_s", "finish_reason", "from_cache"]}})
-            print(f"  {a.handler}: {p.status} {p.verdict} conf={p.confidence} | in {rec.get('prompt_tokens')} "
+            row = result_row(a, rec)
+            rows.append(row)
+            print(f"  {a.handler}: {row['status']} {row['verdict']} conf={row['confidence']} | in {rec.get('prompt_tokens')} "
                   f"out {rec.get('completion_tokens')} (reasoning {rec.get('reasoning_tokens')}) "
                   f"${rec.get('cost') or 0:.5f} {rec.get('latency_s')}s finish={rec.get('finish_reason')}"
                   f"{' [cache]' if rec.get('from_cache') else ''}")
