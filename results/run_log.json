@@ -1,0 +1,1890 @@
+{
+  "sanitize": {
+    "benchmark_sha": "bc5ffeb09fb18ab039806d84ca1f718c2e332c54",
+    "seed": 42,
+    "java_files_sanitized": 2766,
+    "test_cases": 2740,
+    "literal_changes_by_kind": {
+      "identity": 6825,
+      "neutralised": 5063,
+      "config_key": 133
+    },
+    "behaviour_flags": {
+      "comparison/identity": 472
+    },
+    "ast_and_line_check": {
+      "ok": 2766,
+      "failed": 0
+    },
+    "leak_scan": {
+      "files_scanned": 2749,
+      "hits_by_pattern": {
+        "BenchmarkTest": 0,
+        "owasp (outside org.owasp.esapi)": 0,
+        "benchmark": 0,
+        "hint literal": 0,
+        "user name / Safe<Name>": 0,
+        "harness message": 0,
+        "category servlet path": 0,
+        "original config key": 0,
+        "hint words (safe|never|always|should)": 0,
+        "comments (tree-sitter)": 0
+      },
+      "total_hits": 0
+    },
+    "compile": {
+      "status": "ok",
+      "javac_release": 8,
+      "files": 2766,
+      "exit_code": 0,
+      "errors": 0
+    }
+  },
+  "semgrep": {
+    "semgrep_version": "1.181.0",
+    "ruleset": "p/security-audit",
+    "ruleset_sha256": "3e280f9214fb2a533fc94c60e318239ebaade31908cd4aa527fe66c75e54dd9d",
+    "ruleset_rule_count": 225,
+    "ruleset_downloaded": "2026-10-18",
+    "findings": {
+      "sanitized": 2163,
+      "original": 2163
+    },
+    "files_with_findings": {
+      "sanitized": 1769,
+      "original": 1769
+    },
+    "original_vs_sanitized": {
+      "differing_pairs": 0,
+      "by_rule": {},
+      "pairs": []
+    }
+  },
+  "rule_category_map": [
+    {
+      "rule": "command-injection-formatted-runtime-call",
+      "cwe": "78",
+      "category": "cmdi",
+      "basis": "cwe",
+      "findings": 0
+    },
+    {
+      "rule": "tainted-cmd-from-http-request",
+      "cwe": "78",
+      "category": "cmdi",
+      "basis": "cwe",
+      "findings": 221
+    },
+    {
+      "rule": "avoid-implementing-custom-digests",
+      "cwe": "327",
+      "category": "crypto",
+      "basis": "cwe",
+      "findings": 0
+    },
+    {
+      "rule": "cbc-padding-oracle",
+      "cwe": "327",
+      "category": "crypto",
+      "basis": "cwe",
+      "findings": 0
+    },
+    {
+      "rule": "des-is-deprecated",
+      "cwe": "326",
+      "category": "crypto",
+      "basis": "override: Tagged CWE-326 (inadequate strength) but flags DES ciphers, which is the benchmark's weak-cipher category (CWE-327)",
+      "findings": 171
+    },
+    {
+      "rule": "desede-is-deprecated",
+      "cwe": "326",
+      "category": "crypto",
+      "basis": "override: Tagged CWE-326 but flags Triple-DES ciphers; same weak-cipher category as above",
+      "findings": 130
+    },
+    {
+      "rule": "no-null-cipher",
+      "cwe": "327",
+      "category": "crypto",
+      "basis": "cwe",
+      "findings": 0
+    },
+    {
+      "rule": "use-of-md5",
+      "cwe": "328",
+      "category": "hash",
+      "basis": "cwe",
+      "findings": 28
+    },
+    {
+      "rule": "use-of-sha1",
+      "cwe": "328",
+      "category": "hash",
+      "basis": "cwe",
+      "findings": 85
+    },
+    {
+      "rule": "ldap-entry-poisoning",
+      "cwe": "90",
+      "category": "ldapi",
+      "basis": "cwe",
+      "findings": 0
+    },
+    {
+      "rule": "ldap-injection",
+      "cwe": "90",
+      "category": "ldapi",
+      "basis": "cwe",
+      "findings": 0
+    },
+    {
+      "rule": "tainted-ldapi-from-http-request",
+      "cwe": "90",
+      "category": "ldapi",
+      "basis": "cwe",
+      "findings": 54
+    },
+    {
+      "rule": "httpservlet-path-traversal",
+      "cwe": "22",
+      "category": "pathtraver",
+      "basis": "cwe",
+      "findings": 288
+    },
+    {
+      "rule": "jax-rs-path-traversal",
+      "cwe": "22",
+      "category": "pathtraver",
+      "basis": "cwe",
+      "findings": 0
+    },
+    {
+      "rule": "cookie-missing-secure-flag",
+      "cwe": "614",
+      "category": "securecookie",
+      "basis": "cwe",
+      "findings": 36
+    },
+    {
+      "rule": "formatted-sql-string",
+      "cwe": "89",
+      "category": "sqli",
+      "basis": "cwe",
+      "findings": 0
+    },
+    {
+      "rule": "jdbc-sql-formatted-string",
+      "cwe": "89",
+      "category": "sqli",
+      "basis": "cwe",
+      "findings": 0
+    },
+    {
+      "rule": "tainted-sql-from-http-request",
+      "cwe": "89",
+      "category": "sqli",
+      "basis": "cwe",
+      "findings": 388
+    },
+    {
+      "rule": "tainted-session-from-http-request",
+      "cwe": "501",
+      "category": "trustbound",
+      "basis": "cwe",
+      "findings": 61
+    },
+    {
+      "rule": "weak-random",
+      "cwe": "330",
+      "category": "weakrand",
+      "basis": "cwe",
+      "findings": 218
+    },
+    {
+      "rule": "tainted-xpath-from-http-request",
+      "cwe": "643",
+      "category": "xpathi",
+      "basis": "cwe",
+      "findings": 27
+    },
+    {
+      "rule": "no-direct-response-writer",
+      "cwe": "79",
+      "category": "xss",
+      "basis": "cwe",
+      "findings": 456
+    },
+    {
+      "rule": "servletresponse-writer-xss",
+      "cwe": "79",
+      "category": "xss",
+      "basis": "cwe",
+      "findings": 0
+    },
+    {
+      "rule": "xssrequestwrapper-is-insecure",
+      "cwe": "79",
+      "category": "xss",
+      "basis": "cwe",
+      "findings": 0
+    }
+  ],
+  "scanner": [
+    {
+      "category": "cmdi",
+      "real": 126,
+      "not_real": 125,
+      "flagged_real": 112,
+      "flagged_not_real": 96,
+      "tpr": 0.889,
+      "fpr": 0.768,
+      "youden": 0.121,
+      "alerts": 208,
+      "false_alert_share": 0.462
+    },
+    {
+      "category": "crypto",
+      "real": 130,
+      "not_real": 116,
+      "flagged_real": 130,
+      "flagged_not_real": 0,
+      "tpr": 1.0,
+      "fpr": 0.0,
+      "youden": 1.0,
+      "alerts": 130,
+      "false_alert_share": 0.0
+    },
+    {
+      "category": "hash",
+      "real": 129,
+      "not_real": 107,
+      "flagged_real": 89,
+      "flagged_not_real": 0,
+      "tpr": 0.69,
+      "fpr": 0.0,
+      "youden": 0.69,
+      "alerts": 89,
+      "false_alert_share": 0.0
+    },
+    {
+      "category": "ldapi",
+      "real": 27,
+      "not_real": 32,
+      "flagged_real": 26,
+      "flagged_not_real": 28,
+      "tpr": 0.963,
+      "fpr": 0.875,
+      "youden": 0.088,
+      "alerts": 54,
+      "false_alert_share": 0.519
+    },
+    {
+      "category": "pathtraver",
+      "real": 133,
+      "not_real": 135,
+      "flagged_real": 120,
+      "flagged_not_real": 106,
+      "tpr": 0.902,
+      "fpr": 0.785,
+      "youden": 0.117,
+      "alerts": 226,
+      "false_alert_share": 0.469
+    },
+    {
+      "category": "securecookie",
+      "real": 36,
+      "not_real": 31,
+      "flagged_real": 36,
+      "flagged_not_real": 0,
+      "tpr": 1.0,
+      "fpr": 0.0,
+      "youden": 1.0,
+      "alerts": 36,
+      "false_alert_share": 0.0
+    },
+    {
+      "category": "sqli",
+      "real": 272,
+      "not_real": 232,
+      "flagged_real": 234,
+      "flagged_not_real": 143,
+      "tpr": 0.86,
+      "fpr": 0.616,
+      "youden": 0.244,
+      "alerts": 377,
+      "false_alert_share": 0.379
+    },
+    {
+      "category": "trustbound",
+      "real": 83,
+      "not_real": 43,
+      "flagged_real": 43,
+      "flagged_not_real": 18,
+      "tpr": 0.518,
+      "fpr": 0.419,
+      "youden": 0.099,
+      "alerts": 61,
+      "false_alert_share": 0.295
+    },
+    {
+      "category": "weakrand",
+      "real": 218,
+      "not_real": 275,
+      "flagged_real": 218,
+      "flagged_not_real": 0,
+      "tpr": 1.0,
+      "fpr": 0.0,
+      "youden": 1.0,
+      "alerts": 218,
+      "false_alert_share": 0.0
+    },
+    {
+      "category": "xpathi",
+      "real": 15,
+      "not_real": 20,
+      "flagged_real": 14,
+      "flagged_not_real": 13,
+      "tpr": 0.933,
+      "fpr": 0.65,
+      "youden": 0.283,
+      "alerts": 27,
+      "false_alert_share": 0.481
+    },
+    {
+      "category": "xss",
+      "real": 246,
+      "not_real": 209,
+      "flagged_real": 202,
+      "flagged_not_real": 108,
+      "tpr": 0.821,
+      "fpr": 0.517,
+      "youden": 0.304,
+      "alerts": 310,
+      "false_alert_share": 0.348
+    },
+    {
+      "category": "ALL",
+      "real": 1415,
+      "not_real": 1325,
+      "flagged_real": 1224,
+      "flagged_not_real": 512,
+      "tpr": 0.865,
+      "fpr": 0.386,
+      "youden": 0.479,
+      "alerts": 1736,
+      "false_alert_share": 0.295
+    }
+  ],
+  "golden": {
+    "seed": 42,
+    "prompt_version": "v1",
+    "size": 100,
+    "by_part": {
+      "false_positive": 50,
+      "real_dataflow": 38,
+      "real_api": 12
+    },
+    "by_category_label_tier": {
+      "cmdi|false_positive|brutal": 4,
+      "cmdi|false_positive|hard": 5,
+      "cmdi|real|easy": 1,
+      "cmdi|real|hard": 4,
+      "crypto|real|brutal": 1,
+      "crypto|real|easy": 2,
+      "hash|real|easy": 2,
+      "ldapi|false_positive|brutal": 1,
+      "ldapi|false_positive|hard": 2,
+      "ldapi|real|hard": 1,
+      "pathtraver|false_positive|brutal": 4,
+      "pathtraver|false_positive|hard": 6,
+      "pathtraver|real|easy": 2,
+      "pathtraver|real|hard": 4,
+      "securecookie|real|easy": 2,
+      "sqli|false_positive|brutal": 2,
+      "sqli|false_positive|hard": 12,
+      "sqli|real|easy": 3,
+      "sqli|real|hard": 9,
+      "trustbound|false_positive|hard": 2,
+      "trustbound|real|easy": 1,
+      "trustbound|real|hard": 1,
+      "weakrand|real|easy": 5,
+      "xpathi|false_positive|hard": 1,
+      "xpathi|real|hard": 2,
+      "xss|false_positive|brutal": 1,
+      "xss|false_positive|easy": 4,
+      "xss|false_positive|hard": 6,
+      "xss|real|brutal": 1,
+      "xss|real|easy": 5,
+      "xss|real|hard": 4
+    },
+    "items_with_context": 37,
+    "prompt_chars": {
+      "system": 1946,
+      "user_mean": 3823,
+      "user_max": 7342
+    },
+    "approx_input_tokens_mean": 1648,
+    "prompt_leak_scan": {
+      "BenchmarkTest": 0,
+      "owasp (outside org.owasp.esapi)": 0,
+      "benchmark": 0,
+      "hint literal": 0,
+      "user name / Safe<Name>": 0,
+      "harness message": 0,
+      "category servlet path": 0,
+      "original config key": 0,
+      "hint words (safe|never|always|should)": 0
+    }
+  },
+  "smoke_test": [
+    {
+      "alert_id": "Handler2413",
+      "model": "deepseek/deepseek-v4-pro",
+      "endpoint": "baidu/fp8",
+      "provider": "Baidu",
+      "category": "pathtraver",
+      "real_vulnerability": false,
+      "tier": "brutal",
+      "status": "ok",
+      "verdict": "false_positive",
+      "confidence": 1.0,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 1705,
+      "completion_tokens": 563,
+      "reasoning_tokens": 455,
+      "cost": 0.00050236095,
+      "cost_source": "openrouter_usage",
+      "latency_s": 9.82,
+      "finish_reason": "stop",
+      "from_cache": true,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler7916",
+      "model": "deepseek/deepseek-v4-pro",
+      "endpoint": "baidu/fp8",
+      "provider": "Baidu",
+      "category": "sqli",
+      "real_vulnerability": false,
+      "tier": "hard",
+      "status": "ok",
+      "verdict": "false_positive",
+      "confidence": 0.95,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 1422,
+      "completion_tokens": 427,
+      "reasoning_tokens": 341,
+      "cost": 0.0004038762,
+      "cost_source": "openrouter_usage",
+      "latency_s": 8.55,
+      "finish_reason": "stop",
+      "from_cache": true,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler8770",
+      "model": "deepseek/deepseek-v4-pro",
+      "endpoint": "baidu/fp8",
+      "provider": "Baidu",
+      "category": "sqli",
+      "real_vulnerability": true,
+      "tier": "easy",
+      "status": "ok",
+      "verdict": "real",
+      "confidence": 1.0,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 1301,
+      "completion_tokens": 574,
+      "reasoning_tokens": 480,
+      "cost": 0.00035124705,
+      "cost_source": "openrouter_usage",
+      "latency_s": 10.75,
+      "finish_reason": "stop",
+      "from_cache": true,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler9715",
+      "model": "deepseek/deepseek-v4-pro",
+      "endpoint": "baidu/fp8",
+      "provider": "Baidu",
+      "category": "sqli",
+      "real_vulnerability": true,
+      "tier": "hard",
+      "status": "ok",
+      "verdict": "real",
+      "confidence": 1.0,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 1350,
+      "completion_tokens": 554,
+      "reasoning_tokens": 447,
+      "cost": 0.0003528441,
+      "cost_source": "openrouter_usage",
+      "latency_s": 8.9,
+      "finish_reason": "stop",
+      "from_cache": true,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler9857",
+      "model": "deepseek/deepseek-v4-pro",
+      "endpoint": "baidu/fp8",
+      "provider": "Baidu",
+      "category": "weakrand",
+      "real_vulnerability": true,
+      "tier": "easy",
+      "status": "ok",
+      "verdict": "real",
+      "confidence": 0.98,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 1667,
+      "completion_tokens": 754,
+      "reasoning_tokens": 681,
+      "cost": 0.00056340375,
+      "cost_source": "openrouter_usage",
+      "latency_s": 13.52,
+      "finish_reason": "stop",
+      "from_cache": true,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler2413",
+      "model": "z-ai/glm-5.3",
+      "endpoint": "sail-research/us",
+      "provider": "Sail Research",
+      "category": "pathtraver",
+      "real_vulnerability": false,
+      "tier": "brutal",
+      "status": "ok",
+      "verdict": "false_positive",
+      "confidence": 0.98,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 1440,
+      "completion_tokens": 162,
+      "reasoning_tokens": 43,
+      "cost": 0.00096381,
+      "cost_source": "openrouter_usage",
+      "latency_s": 1.88,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler7916",
+      "model": "z-ai/glm-5.3",
+      "endpoint": "sail-research/us",
+      "provider": "Sail Research",
+      "category": "sqli",
+      "real_vulnerability": false,
+      "tier": "hard",
+      "status": "ok",
+      "verdict": "false_positive",
+      "confidence": 0.95,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 1147,
+      "completion_tokens": 148,
+      "reasoning_tokens": 31,
+      "cost": 0.000649936,
+      "cost_source": "openrouter_usage",
+      "latency_s": 1.11,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler8770",
+      "model": "z-ai/glm-5.3",
+      "endpoint": "sail-research/us",
+      "provider": "Sail Research",
+      "category": "sqli",
+      "real_vulnerability": true,
+      "tier": "easy",
+      "status": "ok",
+      "verdict": "real",
+      "confidence": 0.98,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 1024,
+      "completion_tokens": 129,
+      "reasoning_tokens": 1,
+      "cost": 0.000706145,
+      "cost_source": "openrouter_usage",
+      "latency_s": 2.19,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler9715",
+      "model": "z-ai/glm-5.3",
+      "endpoint": "sail-research/us",
+      "provider": "Sail Research",
+      "category": "sqli",
+      "real_vulnerability": true,
+      "tier": "hard",
+      "status": "ok",
+      "verdict": "real",
+      "confidence": 0.95,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 1083,
+      "completion_tokens": 152,
+      "reasoning_tokens": 34,
+      "cost": 0.00077026,
+      "cost_source": "openrouter_usage",
+      "latency_s": 1.54,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler9857",
+      "model": "z-ai/glm-5.3",
+      "endpoint": "sail-research/us",
+      "provider": "Sail Research",
+      "category": "weakrand",
+      "real_vulnerability": true,
+      "tier": "easy",
+      "status": "ok",
+      "verdict": "real",
+      "confidence": 0.95,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 1388,
+      "completion_tokens": 99,
+      "reasoning_tokens": 1,
+      "cost": 0.000842995,
+      "cost_source": "openrouter_usage",
+      "latency_s": 1.38,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler2413",
+      "model": "anthropic/claude-sonnet-5.5",
+      "endpoint": "google-vertex/global",
+      "provider": "Google",
+      "category": "pathtraver",
+      "real_vulnerability": false,
+      "tier": "brutal",
+      "status": "ok",
+      "verdict": "false_positive",
+      "confidence": 0.97,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 2681,
+      "completion_tokens": 181,
+      "reasoning_tokens": 0,
+      "cost": 0.007172,
+      "cost_source": "openrouter_usage",
+      "latency_s": 3.12,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler7916",
+      "model": "anthropic/claude-sonnet-5.5",
+      "endpoint": "google-vertex/global",
+      "provider": "Google",
+      "category": "sqli",
+      "real_vulnerability": false,
+      "tier": "hard",
+      "status": "ok",
+      "verdict": "false_positive",
+      "confidence": 0.97,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 2304,
+      "completion_tokens": 157,
+      "reasoning_tokens": 0,
+      "cost": 0.006178,
+      "cost_source": "openrouter_usage",
+      "latency_s": 2.84,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler8770",
+      "model": "anthropic/claude-sonnet-5.5",
+      "endpoint": "google-vertex/global",
+      "provider": "Google",
+      "category": "sqli",
+      "real_vulnerability": true,
+      "tier": "easy",
+      "status": "ok",
+      "verdict": "real",
+      "confidence": 0.97,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 2072,
+      "completion_tokens": 177,
+      "reasoning_tokens": 0,
+      "cost": 0.005914,
+      "cost_source": "openrouter_usage",
+      "latency_s": 3.17,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler9715",
+      "model": "anthropic/claude-sonnet-5.5",
+      "endpoint": "google-vertex/global",
+      "provider": "Google",
+      "category": "sqli",
+      "real_vulnerability": true,
+      "tier": "hard",
+      "status": "ok",
+      "verdict": "real",
+      "confidence": 0.96,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 2123,
+      "completion_tokens": 165,
+      "reasoning_tokens": 0,
+      "cost": 0.005896,
+      "cost_source": "openrouter_usage",
+      "latency_s": 2.11,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler9857",
+      "model": "anthropic/claude-sonnet-5.5",
+      "endpoint": "google-vertex/global",
+      "provider": "Google",
+      "category": "weakrand",
+      "real_vulnerability": true,
+      "tier": "easy",
+      "status": "ok",
+      "verdict": "real",
+      "confidence": 0.97,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 2637,
+      "completion_tokens": 155,
+      "reasoning_tokens": 0,
+      "cost": 0.006824,
+      "cost_source": "openrouter_usage",
+      "latency_s": 3.1,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler2413",
+      "model": "x-ai/grok-4.7",
+      "endpoint": "xai/zdr",
+      "provider": "xAI",
+      "category": "pathtraver",
+      "real_vulnerability": false,
+      "tier": "brutal",
+      "status": "ok",
+      "verdict": "false_positive",
+      "confidence": 0.96,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 2903,
+      "completion_tokens": 444,
+      "reasoning_tokens": 338,
+      "cost": 0.006742,
+      "cost_source": "openrouter_usage",
+      "latency_s": 10.1,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler7916",
+      "model": "x-ai/grok-4.7",
+      "endpoint": "xai/zdr",
+      "provider": "xAI",
+      "category": "sqli",
+      "real_vulnerability": false,
+      "tier": "hard",
+      "status": "ok",
+      "verdict": "false_positive",
+      "confidence": 0.96,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 2602,
+      "completion_tokens": 760,
+      "reasoning_tokens": 664,
+      "cost": 0.008036,
+      "cost_source": "openrouter_usage",
+      "latency_s": 9.21,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler8770",
+      "model": "x-ai/grok-4.7",
+      "endpoint": "xai/zdr",
+      "provider": "xAI",
+      "category": "sqli",
+      "real_vulnerability": true,
+      "tier": "easy",
+      "status": "ok",
+      "verdict": "real",
+      "confidence": 0.96,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 2470,
+      "completion_tokens": 414,
+      "reasoning_tokens": 305,
+      "cost": 0.005696,
+      "cost_source": "openrouter_usage",
+      "latency_s": 5.51,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler9715",
+      "model": "x-ai/grok-4.7",
+      "endpoint": "xai/zdr",
+      "provider": "xAI",
+      "category": "sqli",
+      "real_vulnerability": true,
+      "tier": "hard",
+      "status": "ok",
+      "verdict": "real",
+      "confidence": 0.92,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 2516,
+      "completion_tokens": 474,
+      "reasoning_tokens": 382,
+      "cost": 0.006148,
+      "cost_source": "openrouter_usage",
+      "latency_s": 4.45,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler9857",
+      "model": "x-ai/grok-4.7",
+      "endpoint": "xai/zdr",
+      "provider": "xAI",
+      "category": "weakrand",
+      "real_vulnerability": true,
+      "tier": "easy",
+      "status": "ok",
+      "verdict": "real",
+      "confidence": 0.96,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 2870,
+      "completion_tokens": 379,
+      "reasoning_tokens": 276,
+      "cost": 0.006286,
+      "cost_source": "openrouter_usage",
+      "latency_s": 4.92,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler2413",
+      "model": "openai/gpt-6-sol",
+      "endpoint": "openai/flex",
+      "provider": "OpenAI",
+      "category": "pathtraver",
+      "real_vulnerability": false,
+      "tier": "brutal",
+      "status": "ok",
+      "verdict": "false_positive",
+      "confidence": 0.99,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 1541,
+      "completion_tokens": 117,
+      "reasoning_tokens": 25,
+      "cost": 0.0025105,
+      "cost_source": "openrouter_usage",
+      "latency_s": 2.99,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler7916",
+      "model": "openai/gpt-6-sol",
+      "endpoint": "openai/flex",
+      "provider": "OpenAI",
+      "category": "sqli",
+      "real_vulnerability": false,
+      "tier": "hard",
+      "status": "ok",
+      "verdict": "false_positive",
+      "confidence": 0.99,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 1235,
+      "completion_tokens": 110,
+      "reasoning_tokens": 30,
+      "cost": 0.002093,
+      "cost_source": "openrouter_usage",
+      "latency_s": 3.12,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler8770",
+      "model": "openai/gpt-6-sol",
+      "endpoint": "openai/flex",
+      "provider": "OpenAI",
+      "category": "sqli",
+      "real_vulnerability": true,
+      "tier": "easy",
+      "status": "ok",
+      "verdict": "real",
+      "confidence": 0.99,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 1117,
+      "completion_tokens": 126,
+      "reasoning_tokens": 33,
+      "cost": 0.0020255,
+      "cost_source": "openrouter_usage",
+      "latency_s": 4.49,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler9715",
+      "model": "openai/gpt-6-sol",
+      "endpoint": "openai/flex",
+      "provider": "OpenAI",
+      "category": "sqli",
+      "real_vulnerability": true,
+      "tier": "hard",
+      "status": "ok",
+      "verdict": "real",
+      "confidence": 0.99,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 1174,
+      "completion_tokens": 115,
+      "reasoning_tokens": 28,
+      "cost": 0.00204175,
+      "cost_source": "openrouter_usage",
+      "latency_s": 2.9,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler9857",
+      "model": "openai/gpt-6-sol",
+      "endpoint": "openai/flex",
+      "provider": "OpenAI",
+      "category": "weakrand",
+      "real_vulnerability": true,
+      "tier": "easy",
+      "status": "ok",
+      "verdict": "real",
+      "confidence": 0.99,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 1503,
+      "completion_tokens": 84,
+      "reasoning_tokens": 0,
+      "cost": 0.002298,
+      "cost_source": "openrouter_usage",
+      "latency_s": 2.73,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": null
+    },
+    {
+      "alert_id": "Handler2413",
+      "model": "anthropic/claude-sonnet-5.5",
+      "endpoint": "anthropic",
+      "provider": "Anthropic",
+      "category": "pathtraver",
+      "real_vulnerability": false,
+      "tier": "brutal",
+      "status": "ok",
+      "verdict": "false_positive",
+      "confidence": 0.97,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 2681,
+      "completion_tokens": 179,
+      "reasoning_tokens": 0,
+      "cost": 0.007152,
+      "cost_source": "openrouter_usage",
+      "latency_s": 3.57,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": "low"
+    },
+    {
+      "alert_id": "Handler7916",
+      "model": "anthropic/claude-sonnet-5.5",
+      "endpoint": "anthropic",
+      "provider": "Anthropic",
+      "category": "sqli",
+      "real_vulnerability": false,
+      "tier": "hard",
+      "status": "ok",
+      "verdict": "false_positive",
+      "confidence": 0.97,
+      "correct": true,
+      "failure": null,
+      "prompt_tokens": 2304,
+      "completion_tokens": 157,
+      "reasoning_tokens": 0,
+      "cost": 0.006178,
+      "cost_source": "openrouter_usage",
+      "latency_s": 2.68,
+      "finish_reason": "stop",
+      "from_cache": false,
+      "reasoning_effort": "low"
+    }
+  ],
+  "eval_run": {
+    "complete": true,
+    "stopped_reason": null,
+    "golden_size": 100,
+    "ledger_total": 1.74619,
+    "cap": 7.0,
+    "models": [
+      {
+        "model": "deepseek/deepseek-v4-pro",
+        "calls": 100,
+        "ok": 97,
+        "harness_failures": 3,
+        "truncated": 3,
+        "from_cache": 100,
+        "correct_raw": 97,
+        "cost": 0.07442,
+        "mean_prompt_tokens": 1501.3,
+        "mean_completion_tokens": 700.6,
+        "mean_reasoning_tokens": 603.0
+      },
+      {
+        "model": "z-ai/glm-5.3",
+        "calls": 100,
+        "ok": 100,
+        "harness_failures": 0,
+        "truncated": 0,
+        "from_cache": 100,
+        "correct_raw": 95,
+        "cost": 0.07048,
+        "mean_prompt_tokens": 1231.1,
+        "mean_completion_tokens": 134.1,
+        "mean_reasoning_tokens": 21.0
+      },
+      {
+        "model": "anthropic/claude-sonnet-5.5",
+        "calls": 100,
+        "ok": 100,
+        "harness_failures": 0,
+        "truncated": 0,
+        "from_cache": 100,
+        "correct_raw": 100,
+        "cost": 0.64606,
+        "mean_prompt_tokens": 2369.4,
+        "mean_completion_tokens": 172.2,
+        "mean_reasoning_tokens": 0.0
+      },
+      {
+        "model": "x-ai/grok-4.7",
+        "calls": 100,
+        "ok": 100,
+        "harness_failures": 0,
+        "truncated": 0,
+        "from_cache": 100,
+        "correct_raw": 99,
+        "cost": 0.64128,
+        "mean_prompt_tokens": 2684.9,
+        "mean_completion_tokens": 484.4,
+        "mean_reasoning_tokens": 387.1
+      },
+      {
+        "model": "openai/gpt-6-sol",
+        "calls": 100,
+        "ok": 100,
+        "harness_failures": 0,
+        "truncated": 0,
+        "from_cache": 100,
+        "correct_raw": 100,
+        "cost": 0.21897,
+        "mean_prompt_tokens": 1325.7,
+        "mean_completion_tokens": 111.6,
+        "mean_reasoning_tokens": 26.0
+      }
+    ]
+  },
+  "context_fix": {
+    "what": "4 real command-injection alerts pass input as an environment variable to a script that runs `eval $FOO`; the script was missing from their prompts. It was added and the helper renamed from getInsecureOSCommandString to getScriptCommandString; only these 4 prompts changed.",
+    "alerts": [
+      "Handler1205",
+      "Handler1740",
+      "Handler6075",
+      "Handler9643"
+    ],
+    "before_fix_of_4": {
+      "anthropic/claude-sonnet-5.5": {
+        "correct": 4,
+        "unanswered": 0
+      },
+      "deepseek/deepseek-v4-pro": {
+        "correct": 0,
+        "unanswered": 0
+      },
+      "openai/gpt-6-sol": {
+        "correct": 2,
+        "unanswered": 0
+      },
+      "x-ai/grok-4.7": {
+        "correct": 0,
+        "unanswered": 0
+      },
+      "z-ai/glm-5.3": {
+        "correct": 0,
+        "unanswered": 0
+      }
+    },
+    "after_fix_of_4": {
+      "anthropic/claude-sonnet-5.5": {
+        "correct": 4,
+        "unanswered": 0
+      },
+      "deepseek/deepseek-v4-pro": {
+        "correct": 1,
+        "unanswered": 3
+      },
+      "openai/gpt-6-sol": {
+        "correct": 4,
+        "unanswered": 0
+      },
+      "x-ai/grok-4.7": {
+        "correct": 3,
+        "unanswered": 0
+      },
+      "z-ai/glm-5.3": {
+        "correct": 4,
+        "unanswered": 0
+      }
+    }
+  },
+  "cost_projection": [
+    {
+      "model": "deepseek/deepseek-v4-pro",
+      "endpoint": "baidu/fp8",
+      "tokens_in": 1495.989691,
+      "tokens_out": 660.443299,
+      "token_basis": "measured",
+      "sync_per_alert": 0.004761,
+      "batch_per_alert": NaN,
+      "monthly_sync_x1": 85.689377,
+      "monthly_batch_x1": NaN,
+      "monthly_sync_x10": 856.893767,
+      "monthly_batch_x10": NaN,
+      "monthly_sync_x100": 8568.93767,
+      "monthly_batch_x100": NaN,
+      "within_budget_sync_x1": true
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash",
+      "endpoint": "baidu/fp8",
+      "tokens_in": 1495.989691,
+      "tokens_out": 660.443299,
+      "token_basis": "assumed from deepseek/deepseek-v4-pro",
+      "sync_per_alert": 0.000394,
+      "batch_per_alert": NaN,
+      "monthly_sync_x1": 7.098528,
+      "monthly_batch_x1": NaN,
+      "monthly_sync_x10": 70.985282,
+      "monthly_batch_x10": NaN,
+      "monthly_sync_x100": 709.852825,
+      "monthly_batch_x100": NaN,
+      "within_budget_sync_x1": true
+    },
+    {
+      "model": "qwen/qwen3.8-27b",
+      "endpoint": "chutes/fp8",
+      "tokens_in": 1495.989691,
+      "tokens_out": 660.443299,
+      "token_basis": "assumed from deepseek/deepseek-v4-pro",
+      "sync_per_alert": 0.000884,
+      "batch_per_alert": NaN,
+      "monthly_sync_x1": 15.910159,
+      "monthly_batch_x1": NaN,
+      "monthly_sync_x10": 159.10159,
+      "monthly_batch_x10": NaN,
+      "monthly_sync_x100": 1591.015899,
+      "monthly_batch_x100": NaN,
+      "within_budget_sync_x1": true
+    },
+    {
+      "model": "qwen/qwen3.5-397b-a17b",
+      "endpoint": "deepinfra/fp8",
+      "tokens_in": 1495.989691,
+      "tokens_out": 660.443299,
+      "token_basis": "assumed from deepseek/deepseek-v4-pro",
+      "sync_per_alert": 0.002655,
+      "batch_per_alert": NaN,
+      "monthly_sync_x1": 47.781455,
+      "monthly_batch_x1": NaN,
+      "monthly_sync_x10": 477.814546,
+      "monthly_batch_x10": NaN,
+      "monthly_sync_x100": 4778.145464,
+      "monthly_batch_x100": NaN,
+      "within_budget_sync_x1": true
+    },
+    {
+      "model": "z-ai/glm-5.3",
+      "endpoint": "sail-research/us",
+      "tokens_in": 1231.07,
+      "tokens_out": 134.14,
+      "token_basis": "measured",
+      "sync_per_alert": 0.000817,
+      "batch_per_alert": 0.000822,
+      "monthly_sync_x1": 14.713483,
+      "monthly_batch_x1": 14.800707,
+      "monthly_sync_x10": 147.134826,
+      "monthly_batch_x10": 148.00707,
+      "monthly_sync_x100": 1471.34826,
+      "monthly_batch_x100": 1480.0707,
+      "within_budget_sync_x1": true
+    },
+    {
+      "model": "moonshotai/kimi-k2.6",
+      "endpoint": "digitalocean",
+      "tokens_in": 1495.989691,
+      "tokens_out": 660.443299,
+      "token_basis": "assumed from deepseek/deepseek-v4-pro",
+      "sync_per_alert": 0.002438,
+      "batch_per_alert": NaN,
+      "monthly_sync_x1": 43.880005,
+      "monthly_batch_x1": NaN,
+      "monthly_sync_x10": 438.800047,
+      "monthly_batch_x10": NaN,
+      "monthly_sync_x100": 4388.000474,
+      "monthly_batch_x100": NaN,
+      "within_budget_sync_x1": true
+    },
+    {
+      "model": "minimax/minimax-m3",
+      "endpoint": "together",
+      "tokens_in": 1495.989691,
+      "tokens_out": 660.443299,
+      "token_basis": "assumed from deepseek/deepseek-v4-pro",
+      "sync_per_alert": 0.001241,
+      "batch_per_alert": NaN,
+      "monthly_sync_x1": 22.34392,
+      "monthly_batch_x1": NaN,
+      "monthly_sync_x10": 223.439196,
+      "monthly_batch_x10": NaN,
+      "monthly_sync_x100": 2234.391959,
+      "monthly_batch_x100": NaN,
+      "within_budget_sync_x1": true
+    },
+    {
+      "model": "anthropic/claude-haiku-5.5",
+      "endpoint": "google-vertex/global",
+      "tokens_in": 1495.989691,
+      "tokens_out": 660.443299,
+      "token_basis": "assumed from deepseek/deepseek-v4-pro",
+      "sync_per_alert": 0.00048,
+      "batch_per_alert": 0.00024,
+      "monthly_sync_x1": 8.636771,
+      "monthly_batch_x1": 4.318386,
+      "monthly_sync_x10": 86.367711,
+      "monthly_batch_x10": 43.183856,
+      "monthly_sync_x100": 863.677113,
+      "monthly_batch_x100": 431.838557,
+      "within_budget_sync_x1": true
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "endpoint": "google-vertex/global",
+      "tokens_in": 2369.41,
+      "tokens_out": 172.18,
+      "token_basis": "measured",
+      "sync_per_alert": 0.006461,
+      "batch_per_alert": 0.00323,
+      "monthly_sync_x1": 116.29116,
+      "monthly_batch_x1": 58.14558,
+      "monthly_sync_x10": 1162.9116,
+      "monthly_batch_x10": 581.4558,
+      "monthly_sync_x100": 11629.116,
+      "monthly_batch_x100": 5814.558,
+      "within_budget_sync_x1": true
+    },
+    {
+      "model": "anthropic/claude-opus-5.5",
+      "endpoint": "azure/global",
+      "tokens_in": 1495.989691,
+      "tokens_out": 660.443299,
+      "token_basis": "assumed from deepseek/deepseek-v4-pro",
+      "sync_per_alert": 0.019193,
+      "batch_per_alert": 0.009596,
+      "monthly_sync_x1": 345.470845,
+      "monthly_batch_x1": 172.735423,
+      "monthly_sync_x10": 3454.708454,
+      "monthly_batch_x10": 1727.354227,
+      "monthly_sync_x100": 34547.084536,
+      "monthly_batch_x100": 17273.542268,
+      "within_budget_sync_x1": true
+    },
+    {
+      "model": "x-ai/grok-4.7",
+      "endpoint": "xai/zdr",
+      "tokens_in": 2684.88,
+      "tokens_out": 484.39,
+      "token_basis": "measured",
+      "sync_per_alert": 0.008276,
+      "batch_per_alert": NaN,
+      "monthly_sync_x1": 148.9698,
+      "monthly_batch_x1": NaN,
+      "monthly_sync_x10": 1489.698,
+      "monthly_batch_x10": NaN,
+      "monthly_sync_x100": 14896.98,
+      "monthly_batch_x100": NaN,
+      "within_budget_sync_x1": true
+    },
+    {
+      "model": "x-ai/grok-4.3",
+      "endpoint": "xai/zdr",
+      "tokens_in": 1495.989691,
+      "tokens_out": 660.443299,
+      "token_basis": "assumed from deepseek/deepseek-v4-pro",
+      "sync_per_alert": 0.003521,
+      "batch_per_alert": 0.002817,
+      "monthly_sync_x1": 63.379716,
+      "monthly_batch_x1": 50.703773,
+      "monthly_sync_x10": 633.797165,
+      "monthly_batch_x10": 507.037732,
+      "monthly_sync_x100": 6337.971649,
+      "monthly_batch_x100": 5070.37732,
+      "within_budget_sync_x1": true
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "endpoint": "openai/flex",
+      "tokens_in": 1495.989691,
+      "tokens_out": 660.443299,
+      "token_basis": "assumed from deepseek/deepseek-v4-pro",
+      "sync_per_alert": 0.00024,
+      "batch_per_alert": 0.00024,
+      "monthly_sync_x1": 4.318386,
+      "monthly_batch_x1": 4.318386,
+      "monthly_sync_x10": 43.183856,
+      "monthly_batch_x10": 43.183856,
+      "monthly_sync_x100": 431.838557,
+      "monthly_batch_x100": 431.838557,
+      "within_budget_sync_x1": true
+    },
+    {
+      "model": "openai/gpt-6-sol",
+      "endpoint": "openai/flex",
+      "tokens_in": 1325.71,
+      "tokens_out": 111.59,
+      "token_basis": "measured",
+      "sync_per_alert": 0.001884,
+      "batch_per_alert": 0.001884,
+      "monthly_sync_x1": 33.90588,
+      "monthly_batch_x1": 33.90588,
+      "monthly_sync_x10": 339.0588,
+      "monthly_batch_x10": 339.0588,
+      "monthly_sync_x100": 3390.588,
+      "monthly_batch_x100": 3390.588,
+      "within_budget_sync_x1": true
+    },
+    {
+      "model": "openai/gpt-5.6-luna",
+      "endpoint": "openai/flex",
+      "tokens_in": 1495.989691,
+      "tokens_out": 660.443299,
+      "token_basis": "assumed from deepseek/deepseek-v4-pro",
+      "sync_per_alert": 0.000546,
+      "batch_per_alert": 0.000546,
+      "monthly_sync_x1": 9.825569,
+      "monthly_batch_x1": 9.825569,
+      "monthly_sync_x10": 98.255691,
+      "monthly_batch_x10": 98.255691,
+      "monthly_sync_x100": 982.556907,
+      "monthly_batch_x100": 982.556907,
+      "within_budget_sync_x1": true
+    }
+  ],
+  "evaluation": {
+    "rule": "most correct answers, then cheapest per month",
+    "recommended": "openai/gpt-6-sol",
+    "alerts_per_month": 18000,
+    "budget_usd_per_month": 5000.0,
+    "models": {
+      "deepseek/deepseek-v4-pro": {
+        "recall_at_threshold": 1.0,
+        "recall_95ci": [
+          0.9286499658256813,
+          1.0
+        ],
+        "by_tier": {
+          "brutal": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "12/12"
+          },
+          "easy": {
+            "real_kept": "23/23",
+            "false_alarms_closed": "4/4"
+          },
+          "hard": {
+            "real_kept": "25/25",
+            "false_alarms_closed": "34/34"
+          }
+        },
+        "by_category": {
+          "cmdi": {
+            "real_kept": "5/5",
+            "false_alarms_closed": "9/9"
+          },
+          "crypto": {
+            "real_kept": "3/3",
+            "false_alarms_closed": "0/0"
+          },
+          "hash": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "0/0"
+          },
+          "ldapi": {
+            "real_kept": "1/1",
+            "false_alarms_closed": "3/3"
+          },
+          "pathtraver": {
+            "real_kept": "6/6",
+            "false_alarms_closed": "10/10"
+          },
+          "securecookie": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "0/0"
+          },
+          "sqli": {
+            "real_kept": "12/12",
+            "false_alarms_closed": "14/14"
+          },
+          "trustbound": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "2/2"
+          },
+          "weakrand": {
+            "real_kept": "5/5",
+            "false_alarms_closed": "0/0"
+          },
+          "xpathi": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "1/1"
+          },
+          "xss": {
+            "real_kept": "10/10",
+            "false_alarms_closed": "11/11"
+          }
+        },
+        "per_month_at_threshold": {
+          "false_alarms_auto_closed": 5309,
+          "false_alarms_left": 0,
+          "real_bugs_wrongly_closed": 0,
+          "scanner_tpr_after_triage": 0.865,
+          "scanner_fpr_after_triage": 0.0
+        },
+        "unanswered_reasons": {
+          "truncated (finish_reason=length)": 3
+        }
+      },
+      "z-ai/glm-5.3": {
+        "recall_at_threshold": 1.0,
+        "recall_95ci": [
+          0.9286499658256813,
+          1.0
+        ],
+        "by_tier": {
+          "brutal": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "12/12"
+          },
+          "easy": {
+            "real_kept": "23/23",
+            "false_alarms_closed": "4/4"
+          },
+          "hard": {
+            "real_kept": "25/25",
+            "false_alarms_closed": "29/34"
+          }
+        },
+        "by_category": {
+          "cmdi": {
+            "real_kept": "5/5",
+            "false_alarms_closed": "9/9"
+          },
+          "crypto": {
+            "real_kept": "3/3",
+            "false_alarms_closed": "0/0"
+          },
+          "hash": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "0/0"
+          },
+          "ldapi": {
+            "real_kept": "1/1",
+            "false_alarms_closed": "3/3"
+          },
+          "pathtraver": {
+            "real_kept": "6/6",
+            "false_alarms_closed": "8/10"
+          },
+          "securecookie": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "0/0"
+          },
+          "sqli": {
+            "real_kept": "12/12",
+            "false_alarms_closed": "12/14"
+          },
+          "trustbound": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "2/2"
+          },
+          "weakrand": {
+            "real_kept": "5/5",
+            "false_alarms_closed": "0/0"
+          },
+          "xpathi": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "1/1"
+          },
+          "xss": {
+            "real_kept": "10/10",
+            "false_alarms_closed": "10/11"
+          }
+        },
+        "per_month_at_threshold": {
+          "false_alarms_auto_closed": 4775,
+          "false_alarms_left": 533,
+          "real_bugs_wrongly_closed": 0,
+          "scanner_tpr_after_triage": 0.865,
+          "scanner_fpr_after_triage": 0.038786028814935064
+        },
+        "unanswered_reasons": {}
+      },
+      "anthropic/claude-sonnet-5.5": {
+        "recall_at_threshold": 1.0,
+        "recall_95ci": [
+          0.9286499658256813,
+          1.0
+        ],
+        "by_tier": {
+          "brutal": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "12/12"
+          },
+          "easy": {
+            "real_kept": "23/23",
+            "false_alarms_closed": "4/4"
+          },
+          "hard": {
+            "real_kept": "25/25",
+            "false_alarms_closed": "34/34"
+          }
+        },
+        "by_category": {
+          "cmdi": {
+            "real_kept": "5/5",
+            "false_alarms_closed": "9/9"
+          },
+          "crypto": {
+            "real_kept": "3/3",
+            "false_alarms_closed": "0/0"
+          },
+          "hash": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "0/0"
+          },
+          "ldapi": {
+            "real_kept": "1/1",
+            "false_alarms_closed": "3/3"
+          },
+          "pathtraver": {
+            "real_kept": "6/6",
+            "false_alarms_closed": "10/10"
+          },
+          "securecookie": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "0/0"
+          },
+          "sqli": {
+            "real_kept": "12/12",
+            "false_alarms_closed": "14/14"
+          },
+          "trustbound": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "2/2"
+          },
+          "weakrand": {
+            "real_kept": "5/5",
+            "false_alarms_closed": "0/0"
+          },
+          "xpathi": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "1/1"
+          },
+          "xss": {
+            "real_kept": "10/10",
+            "false_alarms_closed": "11/11"
+          }
+        },
+        "per_month_at_threshold": {
+          "false_alarms_auto_closed": 5309,
+          "false_alarms_left": 0,
+          "real_bugs_wrongly_closed": 0,
+          "scanner_tpr_after_triage": 0.865,
+          "scanner_fpr_after_triage": 0.0
+        },
+        "unanswered_reasons": {}
+      },
+      "x-ai/grok-4.7": {
+        "recall_at_threshold": 0.98,
+        "recall_95ci": [
+          0.8950431352816304,
+          0.9964608319110235
+        ],
+        "by_tier": {
+          "brutal": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "12/12"
+          },
+          "easy": {
+            "real_kept": "22/23",
+            "false_alarms_closed": "4/4"
+          },
+          "hard": {
+            "real_kept": "25/25",
+            "false_alarms_closed": "34/34"
+          }
+        },
+        "by_category": {
+          "cmdi": {
+            "real_kept": "4/5",
+            "false_alarms_closed": "9/9"
+          },
+          "crypto": {
+            "real_kept": "3/3",
+            "false_alarms_closed": "0/0"
+          },
+          "hash": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "0/0"
+          },
+          "ldapi": {
+            "real_kept": "1/1",
+            "false_alarms_closed": "3/3"
+          },
+          "pathtraver": {
+            "real_kept": "6/6",
+            "false_alarms_closed": "10/10"
+          },
+          "securecookie": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "0/0"
+          },
+          "sqli": {
+            "real_kept": "12/12",
+            "false_alarms_closed": "14/14"
+          },
+          "trustbound": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "2/2"
+          },
+          "weakrand": {
+            "real_kept": "5/5",
+            "false_alarms_closed": "0/0"
+          },
+          "xpathi": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "1/1"
+          },
+          "xss": {
+            "real_kept": "10/10",
+            "false_alarms_closed": "11/11"
+          }
+        },
+        "per_month_at_threshold": {
+          "false_alarms_auto_closed": 5309,
+          "false_alarms_left": 0,
+          "real_bugs_wrongly_closed": 232,
+          "scanner_tpr_after_triage": 0.8491699346405228,
+          "scanner_fpr_after_triage": 0.0
+        },
+        "unanswered_reasons": {}
+      },
+      "openai/gpt-6-sol": {
+        "recall_at_threshold": 1.0,
+        "recall_95ci": [
+          0.9286499658256813,
+          1.0
+        ],
+        "by_tier": {
+          "brutal": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "12/12"
+          },
+          "easy": {
+            "real_kept": "23/23",
+            "false_alarms_closed": "4/4"
+          },
+          "hard": {
+            "real_kept": "25/25",
+            "false_alarms_closed": "34/34"
+          }
+        },
+        "by_category": {
+          "cmdi": {
+            "real_kept": "5/5",
+            "false_alarms_closed": "9/9"
+          },
+          "crypto": {
+            "real_kept": "3/3",
+            "false_alarms_closed": "0/0"
+          },
+          "hash": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "0/0"
+          },
+          "ldapi": {
+            "real_kept": "1/1",
+            "false_alarms_closed": "3/3"
+          },
+          "pathtraver": {
+            "real_kept": "6/6",
+            "false_alarms_closed": "10/10"
+          },
+          "securecookie": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "0/0"
+          },
+          "sqli": {
+            "real_kept": "12/12",
+            "false_alarms_closed": "14/14"
+          },
+          "trustbound": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "2/2"
+          },
+          "weakrand": {
+            "real_kept": "5/5",
+            "false_alarms_closed": "0/0"
+          },
+          "xpathi": {
+            "real_kept": "2/2",
+            "false_alarms_closed": "1/1"
+          },
+          "xss": {
+            "real_kept": "10/10",
+            "false_alarms_closed": "11/11"
+          }
+        },
+        "per_month_at_threshold": {
+          "false_alarms_auto_closed": 5309,
+          "false_alarms_left": 0,
+          "real_bugs_wrongly_closed": 0,
+          "scanner_tpr_after_triage": 0.865,
+          "scanner_fpr_after_triage": 0.0
+        },
+        "unanswered_reasons": {}
+      }
+    },
+    "paired_tests_false_alarms_closed": [
+      {
+        "a": "deepseek/deepseek-v4-pro",
+        "b": "z-ai/glm-5.3",
+        "only_a": 5,
+        "only_b": 0,
+        "p_value": 0.0625
+      },
+      {
+        "a": "deepseek/deepseek-v4-pro",
+        "b": "anthropic/claude-sonnet-5.5",
+        "only_a": 0,
+        "only_b": 0,
+        "p_value": 1.0
+      },
+      {
+        "a": "deepseek/deepseek-v4-pro",
+        "b": "x-ai/grok-4.7",
+        "only_a": 0,
+        "only_b": 0,
+        "p_value": 1.0
+      },
+      {
+        "a": "deepseek/deepseek-v4-pro",
+        "b": "openai/gpt-6-sol",
+        "only_a": 0,
+        "only_b": 0,
+        "p_value": 1.0
+      },
+      {
+        "a": "z-ai/glm-5.3",
+        "b": "anthropic/claude-sonnet-5.5",
+        "only_a": 0,
+        "only_b": 5,
+        "p_value": 0.0625
+      },
+      {
+        "a": "z-ai/glm-5.3",
+        "b": "x-ai/grok-4.7",
+        "only_a": 0,
+        "only_b": 5,
+        "p_value": 0.0625
+      },
+      {
+        "a": "z-ai/glm-5.3",
+        "b": "openai/gpt-6-sol",
+        "only_a": 0,
+        "only_b": 5,
+        "p_value": 0.0625
+      },
+      {
+        "a": "anthropic/claude-sonnet-5.5",
+        "b": "x-ai/grok-4.7",
+        "only_a": 0,
+        "only_b": 0,
+        "p_value": 1.0
+      },
+      {
+        "a": "anthropic/claude-sonnet-5.5",
+        "b": "openai/gpt-6-sol",
+        "only_a": 0,
+        "only_b": 0,
+        "p_value": 1.0
+      },
+      {
+        "a": "x-ai/grok-4.7",
+        "b": "openai/gpt-6-sol",
+        "only_a": 0,
+        "only_b": 0,
+        "p_value": 1.0
+      }
+    ],
+    "certification_note": "With 50 real alerts, 98% recall can't be certified; ~150 real alerts with zero misses would be needed."
+  }
+}

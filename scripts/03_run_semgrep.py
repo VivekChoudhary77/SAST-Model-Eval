@@ -5,7 +5,7 @@ The original code is scanned only to confirm sanitization did not change what Se
 
 Outputs:
   data/semgrep/{sanitized,original}.json, sanitized.sarif   raw findings (gitignored: they quote code)
-  results/semgrep_run.json                                   versions, ruleset hash, counts, comparison (committed)
+  results/run_log.json [semgrep]                             versions, ruleset hash, counts, comparison (committed)
 """
 
 import csv
@@ -22,6 +22,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import config  # noqa: E402
+from triage import runlog  # noqa: E402
 
 RULESET_URL = f"https://semgrep.dev/c/{config.SEMGREP_CONFIG}"
 RULESET = config.SEMGREP_DIR / "security-audit.yaml"
@@ -90,9 +91,8 @@ def main() -> None:
                       for (t, r), o, s in diffs],
         },
     }
-    config.RESULTS_DIR.mkdir(exist_ok=True)
-    (config.RESULTS_DIR / "semgrep_run.json").write_text(json.dumps(summary, indent=2) + "\n")
-    print(f"Wrote {config.RESULTS_DIR / 'semgrep_run.json'}")
+    runlog.write("semgrep", summary)
+    print(f"Wrote section 'semgrep' of {runlog.PATH}")
 
 
 if __name__ == "__main__":

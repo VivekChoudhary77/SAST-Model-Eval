@@ -6,12 +6,11 @@ Add --execute to make the paid calls; each call prints one live line. Ctrl+C sto
 are cached, so rerunning the same command resumes without paying for them again.
 
 Outputs (committed, no code):
-  results/per_alert/<model>.csv    verdict, confidence, tokens, cost, latency, finish reason per alert
-  results/eval_run_summary.json    per model: calls, harness failures, truncations, spend
+  results/answers.csv              every answer: verdict, confidence, tokens, cost, latency, finish reason
+  results/run_log.json [eval_run]  per model: calls, harness failures, truncations, spend
 """
 
 import argparse
-import json
 import sys
 import time
 from pathlib import Path
@@ -20,22 +19,12 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import config  # noqa: E402
-from triage import prompts  # noqa: E402
+from triage import prompts, runlog  # noqa: E402
 from triage.client import BudgetExceeded, CallConfig, TriageClient, credits_remaining  # noqa: E402
-from triage.runner import RESULT_COLUMNS, load_golden, result_row  # noqa: E402
-
-PER_ALERT_DIR = config.RESULTS_DIR / "per_alert"
-
-
-def slug(model: str) -> str:
-    return model.replace("/", "__")
-
+from triage.runner import load_golden, result_row, save_answers, smoke_rows  # noqa: E402
 
 def smoke_cost_per_alert() -> dict[tuple[str, str], float]:
-    path = config.RESULTS_DIR / "smoke_test.csv"
-    if not path.exists():
-        return {}
-    df = pd.read_csv(path)
+    df = smoke_rows()
     df = df[df.status == "ok"]
     return {k: g.cost.mean() for k, g in df.groupby(["model", "endpoint"])}
 
@@ -55,13 +44,6 @@ def plan(client: TriageClient, models: list[str], golden: pd.DataFrame, cfg: Cal
             "worst_case_cost": sum(client.worst_case_cost(model, cfg, user_prompts[h]) for h in pending),
         })
     return pd.DataFrame(rows)
-
-
-def write_results(model: str, rows: list[dict]) -> pd.DataFrame:
-    PER_ALERT_DIR.mkdir(parents=True, exist_ok=True)
-    df = pd.DataFrame(rows, columns=RESULT_COLUMNS)
-    df.to_csv(PER_ALERT_DIR / f"{slug(model)}.csv", index=False)
-    return df
 
 
 def summarise(model: str, df: pd.DataFrame) -> dict:
@@ -126,7 +108,7 @@ def main() -> None:
             stop = "interrupted (Ctrl+C)"
         finally:
             if rows:
-                s = summarise(model, write_results(model, rows))
+                s = summarise(model, save_answers(model, rows))
                 summaries.append(s)
                 print(f"--- {short}: {s['ok']}/{s['calls']} parsed, {s['correct_raw']} correct, "
                       f"{s['harness_failures']} harness failures ({s['truncated']} truncated), ${s['cost']:.4f}",
@@ -137,9 +119,9 @@ def main() -> None:
 
     summary = {"complete": stop is None, "stopped_reason": stop, "golden_size": len(golden),
                "ledger_total": round(client.ledger.total(), 5), "cap": client.cap, "models": summaries}
-    (config.RESULTS_DIR / "eval_run_summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+    runlog.write("eval_run", summary)
     print(f"\nTotal spent (ledger): ${client.ledger.total():.4f} of ${client.cap:.2f} cap. "
-          f"Summary: {config.RESULTS_DIR / 'eval_run_summary.json'}")
+          f"Answers: {config.ANSWERS_CSV}")
 
 
 if __name__ == "__main__":

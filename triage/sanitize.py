@@ -23,7 +23,12 @@ _PACKAGE = re.compile(r"\borg(\s*)\.(\s*)owasp(\s*)\.(\s*)benchmark(\s*)\.(\s*)(
 
 _SERVLET_PATH = re.compile(r"/[a-z]+-\d{2}/BenchmarkTest(\d{5})")  # "/sqli-00/BenchmarkTest00008" leaks the category
 _TEST_ID = re.compile(r"\bBenchmarkTest(\d{5})\b")
-_CODE_RENAMES = {re.compile(r"\bbenchmarkprops\b"): "appProps"}
+# "Insecure" in the helper's name is a benchmark artefact that nudges toward "real"; the script it runs
+# (shown to the model as context) is what decides the verdict.
+_CODE_RENAMES = {
+    re.compile(r"\bbenchmarkprops\b"): "appProps",
+    re.compile(r"\bgetInsecureOSCommandString\b"): "getScriptCommandString",
+}
 
 # Key names predict the label (*Alg1 is always weak), so they get neutral names in a scrambled order.
 CONFIG_KEY_MAP = {
@@ -32,7 +37,9 @@ CONFIG_KEY_MAP = {
     "cryptoAlg1": "cipher.alg.a",
     "cryptoAlg2": "cipher.alg.b",
 }
-LITERAL_RENAMES = {"BenchmarkTest": "Handler", "benchmark.properties": "app.properties"}
+LITERAL_RENAMES = {"BenchmarkTest": "Handler", "benchmark.properties": "app.properties",
+                   "insecureCmd.sh": "runCmd.sh", "insecureCmd.bat": "runCmd.bat"}
+RESOURCE_RENAMES = {"insecureCmd.sh": "runCmd.sh", "insecureCmd.bat": "runCmd.bat"}
 
 # Literals that hint at the label. Each is replaced by a neutral per-file token.
 HINT_LITERALS = {

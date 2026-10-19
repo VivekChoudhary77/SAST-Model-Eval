@@ -3,7 +3,8 @@
 Default is a dry run (free): prints the pinned endpoint, per-alert estimates and the worst-case cost.
 Add --execute to make the paid calls (sequential, cached, budget-guarded).
 
-Output (committed, no code): results/smoke_test.csv, one block of rows per model, with verdict, confidence, tokens, cost, latency, finish reason.
+Output (committed, no code): results/run_log.json [smoke_test], one block of rows per (model, endpoint), with
+verdict, confidence, tokens, cost, latency, finish reason.
 """
 
 import argparse
@@ -16,7 +17,8 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import config  # noqa: E402
 from triage import prompts  # noqa: E402
-from triage.runner import RESULT_COLUMNS, load_golden, result_row  # noqa: E402
+from triage import runlog  # noqa: E402
+from triage.runner import RESULT_COLUMNS, load_golden, result_row, smoke_rows  # noqa: E402
 from triage.client import BudgetExceeded, CallConfig, TriageClient, credits_remaining  # noqa: E402
 
 def pick_alerts(golden: pd.DataFrame, n: int) -> pd.DataFrame:
@@ -75,13 +77,9 @@ def main() -> None:
     finally:
         if rows:
             df = pd.DataFrame(rows, columns=RESULT_COLUMNS)
-            out = config.RESULTS_DIR / "smoke_test.csv"
-            if out.exists():  # keep other (model, endpoint) rows; replace this one's
-                prev = pd.read_csv(out)
-                df_all = pd.concat([prev[(prev.model != args.model) | (prev.endpoint != ep.endpoint)], df])
-            else:
-                df_all = df
-            df_all.to_csv(out, index=False)
+            prev = smoke_rows()  # keep other (model, endpoint) rows; replace this one's
+            df_all = pd.concat([prev[(prev.model != args.model) | (prev.endpoint != ep.endpoint)], df])
+            runlog.write("smoke_test", df_all.astype(object).where(df_all.notna(), None).to_dict("records"))
             ok = df[df.status == "ok"]
             print(f"\n{len(ok)}/{len(df)} parsed, {int(ok.correct.sum())} correct; "
                   f"harness failures: {len(df) - len(ok)}")

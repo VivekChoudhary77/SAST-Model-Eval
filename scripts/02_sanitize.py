@@ -4,7 +4,7 @@ Outputs (gitignored unless noted):
   data/sanitized/java/com/acmepay/app/...   sanitized test cases (web/) and helpers (util/, ...)
   data/sanitized/resources/                 app.properties (4 algorithm keys, renamed) + thing.properties
   golden/id_map.csv                         handler <-> BenchmarkTest ID + label (committed, no code)
-  results/sanitize_summary.json             counts from every check below (committed, no code)
+  results/run_log.json [sanitize]           counts from every check below (committed, no code)
   data/reports/                             literal_changes.csv, sanitize_flags.csv, ast_check.csv, leak_report.txt
 
 Usage: uv run python scripts/02_sanitize.py [--compile]
@@ -12,7 +12,6 @@ Usage: uv run python scripts/02_sanitize.py [--compile]
 
 import argparse
 import csv
-import json
 import random
 import re
 import shutil
@@ -24,6 +23,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import config  # noqa: E402
 from triage import sanitize as S  # noqa: E402
+from triage import runlog  # noqa: E402
 from triage.leaks import LEAK_PATTERNS  # noqa: E402
 
 SRC_ROOT = config.BENCHMARK_DIR / "src/main/java/org/owasp/benchmark"
@@ -72,6 +72,8 @@ def write_resources() -> None:
             lines.append(f"{S.CONFIG_KEY_MAP[key]}={value}")
     (OUT_RESOURCES / "app.properties").write_text("\n".join(sorted(lines)) + "\n")
     shutil.copy(config.BENCHMARK_DIR / "src/main/resources/thing.properties", OUT_RESOURCES / "thing.properties")
+    for original, renamed in S.RESOURCE_RENAMES.items():  # scripts run by Utils.getScriptCommandString
+        shutil.copy(config.BENCHMARK_DIR / "src/main/resources" / original, OUT_RESOURCES / renamed)
 
 
 def compare_flags(file: str, text: str, changes: list[tuple[str, str, str]]) -> list[dict]:
@@ -162,7 +164,7 @@ def main() -> None:
         ast_rows.append({"file": rel, "status": "ok" if not problems else "FAIL", "problems": "; ".join(problems)})
 
     write_resources()
-    for name in ("app.properties", "thing.properties"):
+    for name in ("app.properties", "thing.properties", *S.RESOURCE_RENAMES.values()):
         leak_scope[f"resources/{name}"] = (OUT_RESOURCES / name).read_text()
 
     id_rows.sort(key=lambda r: r["handler"])
@@ -218,9 +220,8 @@ def main() -> None:
         "leak_scan": {"files_scanned": len(leak_scope), "hits_by_pattern": leak_counts, "total_hits": total_hits},
         "compile": compile_result,
     }
-    config.RESULTS_DIR.mkdir(exist_ok=True)
-    (config.RESULTS_DIR / "sanitize_summary.json").write_text(json.dumps(summary, indent=2) + "\n")
-    print(f"\nWrote {config.RESULTS_DIR / 'sanitize_summary.json'}")
+    runlog.write("sanitize", summary)
+    print(f"\nWrote section 'sanitize' of {runlog.PATH}")
 
 
 if __name__ == "__main__":

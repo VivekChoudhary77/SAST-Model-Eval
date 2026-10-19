@@ -2,7 +2,8 @@
 
 import pandas as pd
 
-from triage import parsing
+import config
+from triage import parsing, runlog
 
 RESULT_COLUMNS = ["alert_id", "model", "endpoint", "reasoning_effort", "provider", "category", "real_vulnerability",
                   "tier", "part", "status", "verdict", "confidence", "correct", "failure", "prompt_tokens",
@@ -26,3 +27,32 @@ def result_row(alert, record: dict) -> dict:
 
 def load_golden(path) -> pd.DataFrame:
     return pd.read_csv(path, dtype={"lines": str, "cwe": str}, keep_default_na=False)
+
+
+def smoke_rows() -> pd.DataFrame:
+    """Smoke-test calls (stored in run_log.json) as a table."""
+    return pd.DataFrame(runlog.read("smoke_test") or [], columns=RESULT_COLUMNS)
+
+
+def answers() -> pd.DataFrame:
+    if not config.ANSWERS_CSV.exists():
+        return pd.DataFrame(columns=RESULT_COLUMNS)
+    df = pd.read_csv(config.ANSWERS_CSV)
+    df["real_vulnerability"] = df.real_vulnerability.astype(bool)
+    return df
+
+
+def save_answers(model: str, rows: list[dict]) -> pd.DataFrame:
+    """Replace this model's rows in results/answers.csv; returns this model's rows."""
+    new = pd.DataFrame(rows, columns=RESULT_COLUMNS)
+    old = answers()
+    pd.concat([old[old.model != model], new]).to_csv(config.ANSWERS_CSV, index=False)
+    return new
+
+
+def measured_usage() -> pd.DataFrame:
+    """Successful calls with token usage: the full eval where available, otherwise the smoke test."""
+    full, smoke = answers(), smoke_rows()
+    df = pd.concat([full, smoke[~smoke.set_index(["model", "endpoint"]).index.isin(
+        full.set_index(["model", "endpoint"]).index)]])
+    return df[df.status == "ok"]

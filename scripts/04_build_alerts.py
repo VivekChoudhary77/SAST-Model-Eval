@@ -4,9 +4,9 @@ Rule -> category comes from each rule's CWE metadata matched to the benchmark CW
 The only exceptions are listed in RULE_OVERRIDES with the reason.
 
 Outputs (committed, no code):
-  golden/rule_category_map.csv   every Java rule in the ruleset, its CWEs, mapped category and basis
-  golden/all_alerts.csv          one row per file with >=1 in-category alert: label, rules, lines, tier, tags
-  results/scanner_metrics.csv    per-category and overall TPR / FPR / Youden / share of false alerts
+  golden/all_alerts.csv                    one row per file with >=1 in-category alert: label, rules, lines, tier, tags
+  results/run_log.json [rule_category_map] Java rules that fired or map to a category: CWEs, category, basis
+  results/run_log.json [scanner]           per-category and overall TPR / FPR / Youden / share of false alerts
 """
 
 import csv
@@ -21,6 +21,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import config  # noqa: E402
+from triage import runlog  # noqa: E402
 
 WEB_DIR = config.SANITIZED_DIR / "java/com/acmepay/app/web"
 
@@ -114,7 +115,8 @@ def main() -> None:
     for f in findings:
         f["check_id"] = rule_id(f["check_id"])
     rule_map = build_rule_map(id_map, Counter(f["check_id"] for f in findings))
-    rule_map.to_csv(config.GOLDEN_DIR / "rule_category_map.csv", index=False)
+    runlog.write("rule_category_map", rule_map[(rule_map.findings > 0) | (rule_map.category != "")]
+                 .drop(columns="rule_id").to_dict("records"))
     rule_cat = dict(zip(rule_map.rule_id, rule_map.category))
 
     label = id_map.set_index("handler")
@@ -142,7 +144,7 @@ def main() -> None:
     alerts.to_csv(config.GOLDEN_DIR / "all_alerts.csv", index=False)
 
     metrics = scanner_metrics(id_map, set(per_file))
-    metrics.to_csv(config.RESULTS_DIR / "scanner_metrics.csv", index=False)
+    runlog.write("scanner", metrics.to_dict("records"))
 
     # --- Console report -------------------------------------------------------------------------
     pd.set_option("display.width", 200)

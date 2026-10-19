@@ -1,0 +1,501 @@
+alert_id,model,endpoint,reasoning_effort,provider,category,real_vulnerability,tier,part,status,verdict,confidence,correct,failure,prompt_tokens,completion_tokens,reasoning_tokens,cost,cost_source,latency_s,finish_reason,from_cache
+Handler1023,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,False,brutal,false_positive,ok,false_positive,0.98,True,,1653,1789,1682,0.00092824095,openrouter_usage,27.89,stop,True
+Handler1106,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,True,easy,real_dataflow,ok,real,1.0,True,,1211,536,442,0.00040511835,openrouter_usage,8.64,stop,True
+Handler1133,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,pathtraver,True,hard,real_dataflow,ok,real,0.95,True,,1410,652,565,0.0004815993,openrouter_usage,10.07,stop,True
+Handler1205,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,cmdi,True,hard,real_dataflow,ok,real,0.95,True,,1704,665,568,0.00512746,openrouter_usage,14.17,stop,True
+Handler1232,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,False,hard,false_positive,ok,false_positive,1.0,True,,1284,722,640,0.0004840836,openrouter_usage,10.34,stop,True
+Handler1299,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,trustbound,True,hard,real_dataflow,ok,real,0.95,True,,1528,475,381,0.0003563931,openrouter_usage,9.01,stop,True
+Handler1302,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,cmdi,False,hard,false_positive,ok,false_positive,1.0,True,,1573,389,287,0.00033385695,openrouter_usage,6.77,stop,True
+Handler1371,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,False,hard,false_positive,ok,false_positive,0.99,True,,1365,727,623,0.00041690355,openrouter_usage,11.56,stop,True
+Handler1444,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,ldapi,False,hard,false_positive,ok,false_positive,1.0,True,,1932,733,627,0.0005196471,openrouter_usage,12.41,stop,True
+Handler1550,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,trustbound,False,hard,false_positive,ok,false_positive,1.0,True,,1451,315,225,0.00028594545,openrouter_usage,6.11,stop,True
+Handler1560,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,weakrand,True,easy,real_api,ok,real,0.98,True,,1834,608,528,0.0004578945,openrouter_usage,10.95,stop,True
+Handler1629,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,False,brutal,false_positive,ok,false_positive,0.95,True,,1688,1390,1272,0.0007095186,openrouter_usage,20.58,stop,True
+Handler1740,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,cmdi,True,hard,real_dataflow,harness_failure,,,,truncated (finish_reason=length),1852,2000,2000,0.00988988,openrouter_usage,38.46,length,True
+Handler1792,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,pathtraver,False,hard,false_positive,ok,false_positive,0.95,True,,1359,482,384,0.00032888835,openrouter_usage,8.19,stop,True
+Handler1879,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,cmdi,False,brutal,false_positive,ok,false_positive,0.99,True,,1594,673,590,0.000438375,openrouter_usage,10.82,stop,True
+Handler2021,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,False,hard,false_positive,ok,false_positive,1.0,True,,1174,396,268,0.0002655387,openrouter_usage,6.58,stop,True
+Handler2064,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,False,hard,false_positive,ok,false_positive,1.0,True,,1279,344,229,0.00026571615,openrouter_usage,6.14,stop,True
+Handler2181,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,pathtraver,False,hard,false_positive,ok,false_positive,0.99,True,,1324,813,689,0.0004401495,openrouter_usage,12.29,stop,True
+Handler2317,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,trustbound,False,hard,false_positive,ok,false_positive,0.98,True,,1356,673,571,0.0003961419,openrouter_usage,10.64,stop,True
+Handler2413,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,pathtraver,False,brutal,false_positive,ok,false_positive,1.0,True,,1705,583,495,0.00042613095,openrouter_usage,9.7,stop,True
+Handler2681,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,True,hard,real_dataflow,ok,real,1.0,True,,1175,970,875,0.00046942875,openrouter_usage,13.64,stop,True
+Handler2794,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,False,hard,false_positive,ok,false_positive,1.0,True,,1348,485,389,0.0003280011,openrouter_usage,8.39,stop,True
+Handler2814,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,False,easy,false_positive,ok,false_positive,0.95,True,,1174,448,338,0.0003673215,openrouter_usage,8.39,stop,True
+Handler2837,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,True,hard,real_dataflow,ok,real,0.95,True,,1506,967,888,0.000610428,openrouter_usage,15.6,stop,True
+Handler2852,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,True,hard,real_dataflow,ok,real,0.98,True,,1494,1362,1301,0.0006651561,openrouter_usage,20.85,stop,True
+Handler2863,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,cmdi,True,hard,real_dataflow,ok,real,0.95,True,,1821,619,524,0.00045949155,openrouter_usage,13.72,stop,True
+Handler2931,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,cmdi,False,hard,false_positive,ok,false_positive,0.99,True,,1445,672,568,0.00041158005,openrouter_usage,10.99,stop,True
+Handler3080,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,pathtraver,False,hard,false_positive,ok,false_positive,0.99,True,,1627,581,498,0.00041158005,openrouter_usage,9.49,stop,True
+Handler3442,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,False,hard,false_positive,ok,false_positive,0.95,True,,1241,571,439,0.00042286335,openrouter_usage,9.0,stop,True
+Handler3536,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,securecookie,True,easy,real_api,ok,real,0.95,True,,1424,589,512,0.0003783969,openrouter_usage,10.84,stop,True
+Handler3728,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,pathtraver,True,hard,real_dataflow,ok,real,1.0,True,,1648,821,707,0.0005004825,openrouter_usage,13.61,stop,True
+Handler3786,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,False,hard,false_positive,ok,false_positive,0.95,True,,1366,589,454,0.0003681048,openrouter_usage,9.42,stop,True
+Handler3813,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,pathtraver,False,brutal,false_positive,ok,false_positive,1.0,True,,1814,1107,1005,0.0006314406,openrouter_usage,18.83,stop,True
+Handler3940,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,cmdi,False,hard,false_positive,ok,false_positive,0.99,True,,1546,876,787,0.0005019021,openrouter_usage,14.43,stop,True
+Handler4009,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,True,hard,real_dataflow,ok,real,1.0,True,,1247,418,314,0.00028630035,openrouter_usage,8.49,stop,True
+Handler4033,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,cmdi,False,brutal,false_positive,ok,false_positive,1.0,True,,1519,690,586,0.00043109955,openrouter_usage,10.92,stop,True
+Handler4354,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,True,hard,real_dataflow,ok,real,1.0,True,,1351,489,369,0.00032995305,openrouter_usage,8.21,stop,True
+Handler4441,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,False,hard,false_positive,ok,false_positive,1.0,True,,1341,436,328,0.00030936885,openrouter_usage,7.67,stop,True
+Handler4477,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,ldapi,False,hard,false_positive,ok,false_positive,1.0,True,,1873,390,278,0.00038744685,openrouter_usage,6.86,stop,True
+Handler4684,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,False,hard,false_positive,ok,false_positive,0.99,True,,1593,780,656,0.00047617185,openrouter_usage,13.45,stop,True
+Handler4742,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,False,easy,false_positive,ok,false_positive,0.95,True,,1130,851,745,0.0004192104,openrouter_usage,14.33,stop,True
+Handler5022,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xpathi,True,hard,real_dataflow,ok,real,0.99,True,,1655,686,610,0.00045381315,openrouter_usage,11.1,stop,True
+Handler5066,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,pathtraver,True,easy,real_dataflow,ok,real,0.99,True,,1299,711,580,0.00039951345,openrouter_usage,11.46,stop,True
+Handler5118,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,weakrand,True,easy,real_api,ok,real,0.95,True,,1898,517,429,0.0004369554,openrouter_usage,9.41,stop,True
+Handler5158,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,pathtraver,True,hard,real_dataflow,ok,real,0.99,True,,1597,478,377,0.00036970185,openrouter_usage,8.32,stop,True
+Handler5204,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,True,easy,real_dataflow,ok,real,0.95,True,,1169,877,789,0.00043535835,openrouter_usage,14.59,stop,True
+Handler5241,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,pathtraver,True,hard,real_dataflow,ok,real,1.0,True,,1372,791,645,0.0004408593,openrouter_usage,13.09,stop,True
+Handler5244,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,crypto,True,easy,real_api,ok,real,0.99,True,,2275,807,721,0.00060677505,openrouter_usage,13.3,stop,True
+Handler5246,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,True,easy,real_dataflow,ok,real,1.0,True,,1095,317,235,0.00022348305,openrouter_usage,5.95,stop,True
+Handler5272,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,hash,True,easy,real_api,ok,real,1.0,True,,1654,1008,921,0.0005679135,openrouter_usage,16.57,stop,True
+Handler5282,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,ldapi,False,brutal,false_positive,ok,false_positive,1.0,True,,1984,507,398,0.0004486671,openrouter_usage,8.31,stop,True
+Handler5323,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xpathi,True,hard,real_dataflow,ok,real,0.99,True,,1718,421,332,0.000370944,openrouter_usage,8.17,stop,True
+Handler5395,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,True,hard,real_dataflow,ok,real,1.0,True,,1216,805,729,0.0004181457,openrouter_usage,13.2,stop,True
+Handler5722,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,pathtraver,False,hard,false_positive,ok,false_positive,1.0,True,,1662,395,277,0.0003517794,openrouter_usage,6.66,stop,True
+Handler5813,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,True,easy,real_dataflow,ok,real,0.95,True,,1277,732,617,0.00040306245,openrouter_usage,12.67,stop,True
+Handler6050,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,False,hard,false_positive,ok,false_positive,1.0,True,,1292,655,528,0.0003783969,openrouter_usage,10.33,stop,True
+Handler6075,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,cmdi,True,hard,real_dataflow,harness_failure,,,,truncated (finish_reason=length),1600,2000,2000,0.009464,openrouter_usage,38.14,length,True
+Handler6116,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,cmdi,False,hard,false_positive,ok,false_positive,0.99,True,,1795,669,574,0.00047262285,openrouter_usage,11.97,stop,True
+Handler6183,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,hash,True,easy,real_api,ok,real,0.95,True,,1646,795,713,0.0004909002,openrouter_usage,13.69,stop,True
+Handler6359,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,weakrand,True,easy,real_api,ok,real,0.95,True,,1785,549,462,0.00042826035,openrouter_usage,9.05,stop,True
+Handler6396,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,True,hard,real_dataflow,ok,real,0.95,True,,1390,603,512,0.0003773322,openrouter_usage,10.21,stop,True
+Handler6472,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,False,hard,false_positive,ok,false_positive,0.98,True,,1160,357,240,0.0002492133,openrouter_usage,6.33,stop,True
+Handler6540,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,pathtraver,False,hard,false_positive,ok,false_positive,1.0,True,,1364,757,652,0.0004273731,openrouter_usage,12.08,stop,True
+Handler6650,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,False,brutal,false_positive,ok,false_positive,0.99,True,,1484,804,719,0.0004653474,openrouter_usage,12.27,stop,True
+Handler6775,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,False,easy,false_positive,ok,false_positive,1.0,True,,1330,899,807,0.0004717356,openrouter_usage,13.72,stop,True
+Handler6833,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,True,hard,real_dataflow,ok,real,0.95,True,,1385,552,451,0.00035834505,openrouter_usage,8.99,stop,True
+Handler6881,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,True,easy,real_dataflow,ok,real,0.95,True,,1188,647,567,0.0003571029,openrouter_usage,10.44,stop,True
+Handler7056,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,False,hard,false_positive,ok,false_positive,0.98,True,,1256,665,562,0.0003755577,openrouter_usage,9.92,stop,True
+Handler7109,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,crypto,True,easy,real_api,ok,real,0.99,True,,2084,611,499,0.0005033217,openrouter_usage,9.52,stop,True
+Handler7317,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,False,easy,false_positive,ok,false_positive,0.95,True,,1295,640,553,0.00037360575,openrouter_usage,11.46,stop,True
+Handler7456,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,pathtraver,False,hard,false_positive,ok,false_positive,1.0,True,,1741,399,287,0.00036721755,openrouter_usage,6.95,stop,True
+Handler7486,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,True,hard,real_dataflow,ok,real,1.0,True,,1725,513,408,0.00040483695,openrouter_usage,8.59,stop,True
+Handler7840,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,False,hard,false_positive,ok,false_positive,0.99,True,,1266,655,546,0.0003737832,openrouter_usage,9.93,stop,True
+Handler7916,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,False,hard,false_positive,ok,false_positive,0.95,True,,1422,679,567,0.000409983,openrouter_usage,10.72,stop,True
+Handler7976,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,weakrand,True,easy,real_api,ok,real,0.95,True,,1838,892,797,0.0005593959,openrouter_usage,15.28,stop,True
+Handler7982,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,ldapi,True,hard,real_dataflow,ok,real,0.95,True,,2053,523,409,0.00046658955,openrouter_usage,8.15,stop,True
+Handler8082,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,True,easy,real_dataflow,ok,real,1.0,True,,1341,244,147,0.00024122805,openrouter_usage,5.02,stop,True
+Handler8239,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,trustbound,True,easy,real_dataflow,ok,real,0.9,True,,1342,418,311,0.0003031581,openrouter_usage,7.46,stop,True
+Handler8243,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,cmdi,False,hard,false_positive,ok,false_positive,0.95,True,,1633,406,287,0.00035053725,openrouter_usage,7.26,stop,True
+Handler8264,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,pathtraver,False,brutal,false_positive,ok,false_positive,0.95,True,,1773,464,337,0.00039596445,openrouter_usage,7.59,stop,True
+Handler8295,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,True,hard,real_dataflow,ok,real,0.99,True,,1322,573,465,0.0003546186,openrouter_usage,10.0,stop,True
+Handler8373,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,False,hard,false_positive,ok,false_positive,1.0,True,,1111,592,520,0.00032391975,openrouter_usage,8.99,stop,True
+Handler8449,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,True,easy,real_dataflow,ok,real,0.95,True,,1248,1079,982,0.0005210667,openrouter_usage,16.58,stop,True
+Handler8450,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,pathtraver,True,easy,real_dataflow,ok,real,0.95,True,,1343,520,434,0.00033953535,openrouter_usage,8.18,stop,True
+Handler8504,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,True,hard,real_dataflow,ok,real,1.0,True,,1274,489,386,0.0003162894,openrouter_usage,8.6,stop,True
+Handler8770,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,True,easy,real_dataflow,ok,real,1.0,True,,1301,478,375,0.00031717665,openrouter_usage,8.37,stop,True
+Handler8806,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,True,brutal,real_dataflow,ok,real,0.95,True,,1472,1672,1584,0.0007712712,openrouter_usage,25.8,stop,True
+Handler9001,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,cmdi,False,brutal,false_positive,ok,false_positive,1.0,True,,1584,786,673,0.0004767042,openrouter_usage,11.46,stop,True
+Handler9295,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xss,False,hard,false_positive,ok,false_positive,0.99,True,,1116,586,489,0.0003226776,openrouter_usage,9.32,stop,True
+Handler9375,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,False,hard,false_positive,ok,false_positive,1.0,True,,1260,358,234,0.0002673132,openrouter_usage,6.71,stop,True
+Handler9453,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,pathtraver,False,brutal,false_positive,ok,false_positive,1.0,True,,1715,539,402,0.00041228985,openrouter_usage,9.51,stop,True
+Handler9566,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,cmdi,False,brutal,false_positive,ok,false_positive,1.0,True,,1657,777,674,0.00048646395,openrouter_usage,12.37,stop,True
+Handler9643,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,cmdi,True,easy,real_dataflow,harness_failure,,,,truncated (finish_reason=length),1568,2000,2000,0.00940992,openrouter_usage,36.31,length,True
+Handler9705,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,xpathi,False,hard,false_positive,ok,false_positive,0.95,True,,1847,549,419,0.00043926225,openrouter_usage,8.9,stop,True
+Handler9715,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,True,hard,real_dataflow,ok,real,1.0,True,,1350,678,620,0.0003968517,openrouter_usage,11.25,stop,True
+Handler9790,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,True,hard,real_dataflow,ok,real,1.0,True,,1306,337,241,0.000268023,openrouter_usage,6.04,stop,True
+Handler9797,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,sqli,False,hard,false_positive,ok,false_positive,0.99,True,,1427,944,846,0.00050491875,openrouter_usage,14.62,stop,True
+Handler9799,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,securecookie,True,easy,real_api,ok,real,0.95,True,,1392,773,688,0.0004380201,openrouter_usage,13.81,stop,True
+Handler9857,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,weakrand,True,easy,real_api,ok,real,0.9,True,,1667,853,768,0.00051521085,openrouter_usage,14.53,stop,True
+Handler9885,deepseek/deepseek-v4-pro,baidu/fp8,high,Baidu,crypto,True,brutal,real_api,ok,real,0.95,True,,2153,356,274,0.00042506625,openrouter_usage,6.44,stop,True
+Handler1023,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,False,brutal,false_positive,ok,false_positive,0.95,True,,1356,132,26,0.00087666,openrouter_usage,1.63,stop,True
+Handler1106,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,True,easy,real_dataflow,ok,real,0.98,True,,925,101,1,0.000614505,openrouter_usage,1.39,stop,True
+Handler1133,z-ai/glm-5.3,sail-research/us,low,Sail Research,pathtraver,True,hard,real_dataflow,ok,real,1.0,True,,1141,110,13,0.000589746,openrouter_usage,1.52,stop,True
+Handler1205,z-ai/glm-5.3,sail-research/us,low,Sail Research,cmdi,True,hard,real_dataflow,ok,real,0.92,True,,1424,169,38,0.000966345,openrouter_usage,1.75,stop,True
+Handler1232,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,False,hard,false_positive,ok,false_positive,0.98,True,,1028,131,28,0.000711155,openrouter_usage,1.63,stop,True
+Handler1299,z-ai/glm-5.3,sail-research/us,low,Sail Research,trustbound,True,hard,real_dataflow,ok,real,0.9,True,,1251,134,1,0.00082717,openrouter_usage,1.63,stop,True
+Handler1302,z-ai/glm-5.3,sail-research/us,low,Sail Research,cmdi,False,hard,false_positive,ok,false_positive,0.95,True,,1307,196,30,0.00094848,openrouter_usage,2.04,stop,True
+Handler1371,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,False,hard,false_positive,ok,false_positive,0.95,True,,1090,213,95,0.000719261,openrouter_usage,2.03,stop,True
+Handler1444,z-ai/glm-5.3,sail-research/us,low,Sail Research,ldapi,False,hard,false_positive,ok,false_positive,0.97,True,,1623,110,1,0.000830746,openrouter_usage,1.42,stop,True
+Handler1550,z-ai/glm-5.3,sail-research/us,low,Sail Research,trustbound,False,hard,false_positive,ok,false_positive,0.92,True,,1183,118,1,0.00076909,openrouter_usage,1.74,stop,True
+Handler1560,z-ai/glm-5.3,sail-research/us,low,Sail Research,weakrand,True,easy,real_api,ok,real,1.0,True,,1538,88,1,0.00090144,openrouter_usage,1.31,stop,True
+Handler1629,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,False,brutal,false_positive,ok,false_positive,0.97,True,,1423,123,17,0.000750311,openrouter_usage,1.79,stop,True
+Handler1740,z-ai/glm-5.3,sail-research/us,low,Sail Research,cmdi,True,hard,real_dataflow,ok,real,0.95,True,,1560,161,25,0.001022305,openrouter_usage,1.31,stop,True
+Handler1792,z-ai/glm-5.3,sail-research/us,low,Sail Research,pathtraver,False,hard,false_positive,ok,real,0.95,False,,1101,115,1,0.000577271,openrouter_usage,1.22,stop,True
+Handler1879,z-ai/glm-5.3,sail-research/us,low,Sail Research,cmdi,False,brutal,false_positive,ok,false_positive,0.93,True,,1326,144,13,0.00087972,openrouter_usage,1.84,stop,True
+Handler2021,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,False,hard,false_positive,ok,real,0.95,False,,919,121,21,0.000495301,openrouter_usage,1.31,stop,True
+Handler2064,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,False,hard,false_positive,ok,false_positive,0.98,True,,1007,125,21,0.000545321,openrouter_usage,3.05,stop,True
+Handler2181,z-ai/glm-5.3,sail-research/us,low,Sail Research,pathtraver,False,hard,false_positive,ok,false_positive,0.97,True,,1062,138,22,0.00073869,openrouter_usage,3.29,stop,True
+Handler2317,z-ai/glm-5.3,sail-research/us,low,Sail Research,trustbound,False,hard,false_positive,ok,false_positive,0.97,True,,1096,105,22,0.000706025,openrouter_usage,4.57,stop,True
+Handler2413,z-ai/glm-5.3,sail-research/us,low,Sail Research,pathtraver,False,brutal,false_positive,ok,false_positive,0.98,True,,1440,162,43,0.00096381,openrouter_usage,1.88,stop,True
+Handler2681,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,True,hard,real_dataflow,ok,real,0.98,True,,929,160,38,0.000558996,openrouter_usage,1.49,stop,True
+Handler2794,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,False,hard,false_positive,ok,false_positive,0.95,True,,1087,109,15,0.000561241,openrouter_usage,1.33,stop,True
+Handler2814,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,False,easy,false_positive,ok,false_positive,0.9,True,,919,104,14,0.000469716,openrouter_usage,1.42,stop,True
+Handler2837,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,True,hard,real_dataflow,ok,real,0.9,True,,1241,142,27,0.000687906,openrouter_usage,1.82,stop,True
+Handler2852,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,True,hard,real_dataflow,ok,real,0.95,True,,1222,139,25,0.000673891,openrouter_usage,1.56,stop,True
+Handler2863,z-ai/glm-5.3,sail-research/us,low,Sail Research,cmdi,True,hard,real_dataflow,ok,real,0.97,True,,1543,241,95,0.001134205,openrouter_usage,5.21,stop,True
+Handler2931,z-ai/glm-5.3,sail-research/us,low,Sail Research,cmdi,False,hard,false_positive,ok,false_positive,0.9,True,,1187,200,74,0.000748196,openrouter_usage,3.36,stop,True
+Handler3080,z-ai/glm-5.3,sail-research/us,low,Sail Research,pathtraver,False,hard,false_positive,ok,false_positive,0.93,True,,1345,138,27,0.000733886,openrouter_usage,1.63,stop,True
+Handler3442,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,False,hard,false_positive,ok,real,1.0,False,,975,114,1,0.000512766,openrouter_usage,1.64,stop,True
+Handler3536,z-ai/glm-5.3,sail-research/us,low,Sail Research,securecookie,True,easy,real_api,ok,real,1.0,True,,1168,68,1,0.000540036,openrouter_usage,1.01,stop,True
+Handler3728,z-ai/glm-5.3,sail-research/us,low,Sail Research,pathtraver,True,hard,real_dataflow,ok,real,0.97,True,,1379,133,13,0.000743361,openrouter_usage,1.53,stop,True
+Handler3786,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,False,hard,false_positive,ok,false_positive,0.97,True,,1099,129,16,0.000743645,openrouter_usage,2.65,stop,True
+Handler3813,z-ai/glm-5.3,sail-research/us,low,Sail Research,pathtraver,False,brutal,false_positive,ok,false_positive,0.98,True,,1539,148,35,0.000845936,openrouter_usage,1.51,stop,True
+Handler3940,z-ai/glm-5.3,sail-research/us,low,Sail Research,cmdi,False,hard,false_positive,ok,false_positive,0.9,True,,1288,172,55,0.000756556,openrouter_usage,1.75,stop,True
+Handler4009,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,True,hard,real_dataflow,ok,real,0.95,True,,989,120,1,0.000528796,openrouter_usage,1.29,stop,True
+Handler4033,z-ai/glm-5.3,sail-research/us,low,Sail Research,cmdi,False,brutal,false_positive,ok,false_positive,0.97,True,,1258,166,57,0.000732526,openrouter_usage,2.43,stop,True
+Handler4354,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,True,hard,real_dataflow,ok,real,0.99,True,,1065,122,1,0.00071611,openrouter_usage,2.24,stop,True
+Handler4441,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,False,hard,false_positive,ok,false_positive,0.97,True,,1076,135,1,0.000594871,openrouter_usage,1.83,stop,True
+Handler4477,z-ai/glm-5.3,sail-research/us,low,Sail Research,ldapi,False,hard,false_positive,ok,false_positive,0.98,True,,1580,111,1,0.000810751,openrouter_usage,1.15,stop,True
+Handler4684,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,False,hard,false_positive,ok,false_positive,0.93,True,,1321,144,21,0.000730916,openrouter_usage,3.11,stop,True
+Handler4742,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,False,easy,false_positive,ok,false_positive,0.93,True,,878,117,12,0.000468781,openrouter_usage,2.29,stop,True
+Handler5022,z-ai/glm-5.3,sail-research/us,low,Sail Research,xpathi,True,hard,real_dataflow,ok,real,0.97,True,,1345,113,1,0.000696261,openrouter_usage,1.01,stop,True
+Handler5066,z-ai/glm-5.3,sail-research/us,low,Sail Research,pathtraver,True,easy,real_dataflow,ok,real,1.0,True,,1035,139,1,0.000726695,openrouter_usage,3.31,stop,True
+Handler5118,z-ai/glm-5.3,sail-research/us,low,Sail Research,weakrand,True,easy,real_api,ok,real,1.0,True,,1615,111,1,0.000828251,openrouter_usage,1.52,stop,True
+Handler5158,z-ai/glm-5.3,sail-research/us,low,Sail Research,pathtraver,True,hard,real_dataflow,ok,real,0.95,True,,1320,164,36,0.000760516,openrouter_usage,5.49,stop,True
+Handler5204,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,True,easy,real_dataflow,ok,real,0.95,True,,919,127,21,0.000504331,openrouter_usage,2.9,stop,True
+Handler5241,z-ai/glm-5.3,sail-research/us,low,Sail Research,pathtraver,True,hard,real_dataflow,ok,real,0.95,True,,1120,119,1,0.000592791,openrouter_usage,1.6,stop,True
+Handler5244,z-ai/glm-5.3,sail-research/us,low,Sail Research,crypto,True,easy,real_api,ok,real,1.0,True,,1986,93,1,0.000986661,openrouter_usage,1.29,stop,True
+Handler5246,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,True,easy,real_dataflow,ok,real,0.98,True,,851,89,1,0.000413141,openrouter_usage,1.19,stop,True
+Handler5272,z-ai/glm-5.3,sail-research/us,low,Sail Research,hash,True,easy,real_api,ok,real,1.0,True,,1382,145,1,0.000762921,openrouter_usage,2.95,stop,True
+Handler5282,z-ai/glm-5.3,sail-research/us,low,Sail Research,ldapi,False,brutal,false_positive,ok,false_positive,0.98,True,,1677,113,20,0.000862261,openrouter_usage,1.42,stop,True
+Handler5323,z-ai/glm-5.3,sail-research/us,low,Sail Research,xpathi,True,hard,real_dataflow,ok,real,0.97,True,,1398,141,15,0.000764901,openrouter_usage,1.61,stop,True
+Handler5395,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,True,hard,real_dataflow,ok,real,0.98,True,,965,141,28,0.000548401,openrouter_usage,1.86,stop,True
+Handler5722,z-ai/glm-5.3,sail-research/us,low,Sail Research,pathtraver,False,hard,false_positive,ok,false_positive,0.99,True,,1392,130,15,0.000745346,openrouter_usage,1.59,stop,True
+Handler5813,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,True,easy,real_dataflow,ok,real,0.95,True,,1020,131,18,0.000560851,openrouter_usage,1.62,stop,True
+Handler6050,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,False,hard,false_positive,ok,false_positive,0.97,True,,1027,157,29,0.000603481,openrouter_usage,2.04,stop,True
+Handler6075,z-ai/glm-5.3,sail-research/us,low,Sail Research,cmdi,True,hard,real_dataflow,ok,real,0.95,True,,1329,202,50,0.00096851,openrouter_usage,2.62,stop,True
+Handler6116,z-ai/glm-5.3,sail-research/us,low,Sail Research,cmdi,False,hard,false_positive,ok,false_positive,1.0,True,,1527,153,26,0.000847461,openrouter_usage,1.35,stop,True
+Handler6183,z-ai/glm-5.3,sail-research/us,low,Sail Research,hash,True,easy,real_api,ok,real,0.98,True,,1368,84,1,0.000664116,openrouter_usage,1.78,stop,True
+Handler6359,z-ai/glm-5.3,sail-research/us,low,Sail Research,weakrand,True,easy,real_api,ok,real,1.0,True,,1510,110,1,0.000774246,openrouter_usage,1.63,stop,True
+Handler6396,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,True,hard,real_dataflow,ok,real,0.9,True,,1130,136,37,0.000623376,openrouter_usage,1.67,stop,True
+Handler6472,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,False,hard,false_positive,ok,false_positive,0.97,True,,913,116,18,0.000484776,openrouter_usage,1.37,stop,True
+Handler6540,z-ai/glm-5.3,sail-research/us,low,Sail Research,pathtraver,False,hard,false_positive,ok,false_positive,0.97,True,,1103,170,43,0.000661046,openrouter_usage,2.22,stop,True
+Handler6650,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,False,brutal,false_positive,ok,false_positive,0.95,True,,1243,127,21,0.000666331,openrouter_usage,2.25,stop,True
+Handler6775,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,False,easy,false_positive,ok,false_positive,0.95,True,,1069,139,12,0.000743695,openrouter_usage,1.45,stop,True
+Handler6833,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,True,hard,real_dataflow,ok,real,0.98,True,,1104,159,48,0.000644991,openrouter_usage,2.18,stop,True
+Handler6881,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,True,easy,real_dataflow,ok,real,1.0,True,,939,113,1,0.000493261,openrouter_usage,2.24,stop,True
+Handler7056,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,False,hard,false_positive,ok,false_positive,0.95,True,,1007,105,13,0.000515221,openrouter_usage,1.83,stop,True
+Handler7109,z-ai/glm-5.3,sail-research/us,low,Sail Research,crypto,True,easy,real_api,ok,real,0.98,True,,1790,136,17,0.000953376,openrouter_usage,2.89,stop,True
+Handler7317,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,False,easy,false_positive,ok,false_positive,0.95,True,,1037,109,1,0.000536241,openrouter_usage,1.8,stop,True
+Handler7456,z-ai/glm-5.3,sail-research/us,low,Sail Research,pathtraver,False,hard,false_positive,ok,real,0.97,False,,1450,115,1,0.000751771,openrouter_usage,4.91,stop,True
+Handler7486,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,True,hard,real_dataflow,ok,real,0.97,True,,1449,147,30,0.000799431,openrouter_usage,3.25,stop,True
+Handler7840,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,False,hard,false_positive,ok,false_positive,0.95,True,,1005,135,17,0.000559371,openrouter_usage,3.06,stop,True
+Handler7916,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,False,hard,false_positive,ok,false_positive,0.95,True,,1147,148,31,0.000649936,openrouter_usage,1.11,stop,True
+Handler7976,z-ai/glm-5.3,sail-research/us,low,Sail Research,weakrand,True,easy,real_api,ok,real,1.0,True,,1562,103,1,0.000789711,openrouter_usage,2.02,stop,True
+Handler7982,z-ai/glm-5.3,sail-research/us,low,Sail Research,ldapi,True,hard,real_dataflow,ok,real,0.97,True,,1734,135,1,0.000923871,openrouter_usage,3.12,stop,True
+Handler8082,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,True,easy,real_dataflow,ok,real,1.0,True,,1067,101,1,0.000539201,openrouter_usage,1.96,stop,True
+Handler8239,z-ai/glm-5.3,sail-research/us,low,Sail Research,trustbound,True,easy,real_dataflow,ok,real,0.6,True,,1077,286,162,0.000822626,openrouter_usage,3.47,stop,True
+Handler8243,z-ai/glm-5.3,sail-research/us,low,Sail Research,cmdi,False,hard,false_positive,ok,false_positive,0.93,True,,1372,155,27,0.000772971,openrouter_usage,1.84,stop,True
+Handler8264,z-ai/glm-5.3,sail-research/us,low,Sail Research,pathtraver,False,brutal,false_positive,ok,false_positive,0.95,True,,1506,120,17,0.000787296,openrouter_usage,1.31,stop,True
+Handler8295,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,True,hard,real_dataflow,ok,real,0.97,True,,1056,148,35,0.000604436,openrouter_usage,1.51,stop,True
+Handler8373,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,False,hard,false_positive,ok,false_positive,1.0,True,,866,69,1,0.000390541,openrouter_usage,1.11,stop,True
+Handler8449,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,True,easy,real_dataflow,ok,real,0.95,True,,988,194,58,0.000639666,openrouter_usage,2.73,stop,True
+Handler8450,z-ai/glm-5.3,sail-research/us,low,Sail Research,pathtraver,True,easy,real_dataflow,ok,real,0.97,True,,1077,131,18,0.000589351,openrouter_usage,1.33,stop,True
+Handler8504,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,True,hard,real_dataflow,ok,real,0.99,True,,1004,103,1,0.000510711,openrouter_usage,1.29,stop,True
+Handler8770,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,True,easy,real_dataflow,ok,real,0.98,True,,1024,129,1,0.000706145,openrouter_usage,2.19,stop,True
+Handler8806,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,True,brutal,real_dataflow,ok,real,0.95,True,,1232,147,18,0.000690931,openrouter_usage,1.29,stop,True
+Handler9001,z-ai/glm-5.3,sail-research/us,low,Sail Research,cmdi,False,brutal,false_positive,ok,false_positive,0.95,True,,1317,152,31,0.000740956,openrouter_usage,1.82,stop,True
+Handler9295,z-ai/glm-5.3,sail-research/us,low,Sail Research,xss,False,hard,false_positive,ok,false_positive,0.85,True,,871,142,51,0.000502906,openrouter_usage,2.66,stop,True
+Handler9375,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,False,hard,false_positive,ok,false_positive,0.98,True,,978,135,26,0.000545871,openrouter_usage,1.31,stop,True
+Handler9453,z-ai/glm-5.3,sail-research/us,low,Sail Research,pathtraver,False,brutal,false_positive,ok,false_positive,1.0,True,,1435,158,42,0.000808986,openrouter_usage,1.41,stop,True
+Handler9566,z-ai/glm-5.3,sail-research/us,low,Sail Research,cmdi,False,brutal,false_positive,ok,false_positive,0.97,True,,1392,101,1,0.000701701,openrouter_usage,1.32,stop,True
+Handler9643,z-ai/glm-5.3,sail-research/us,low,Sail Research,cmdi,True,easy,real_dataflow,ok,real,0.95,True,,1299,163,41,0.000894815,openrouter_usage,2.09,stop,True
+Handler9705,z-ai/glm-5.3,sail-research/us,low,Sail Research,xpathi,False,hard,false_positive,ok,false_positive,0.95,True,,1519,131,25,0.000810351,openrouter_usage,1.37,stop,True
+Handler9715,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,True,hard,real_dataflow,ok,real,0.95,True,,1083,152,34,0.00077026,openrouter_usage,1.54,stop,True
+Handler9790,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,True,hard,real_dataflow,ok,real,0.99,True,,1045,118,1,0.000553786,openrouter_usage,1.6,stop,True
+Handler9797,z-ai/glm-5.3,sail-research/us,low,Sail Research,sqli,False,hard,false_positive,ok,real,0.97,False,,1154,102,1,0.000584206,openrouter_usage,1.21,stop,True
+Handler9799,z-ai/glm-5.3,sail-research/us,low,Sail Research,securecookie,True,easy,real_api,ok,real,1.0,True,,1135,100,1,0.000571696,openrouter_usage,1.81,stop,True
+Handler9857,z-ai/glm-5.3,sail-research/us,low,Sail Research,weakrand,True,easy,real_api,ok,real,0.95,True,,1388,99,1,0.000842995,openrouter_usage,1.38,stop,True
+Handler9885,z-ai/glm-5.3,sail-research/us,low,Sail Research,crypto,True,brutal,real_api,ok,real,0.95,True,,1866,115,1,0.000959771,openrouter_usage,1.38,stop,True
+Handler1023,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,False,brutal,false_positive,ok,false_positive,0.97,True,,2617,187,0,0.007104,openrouter_usage,3.46,stop,True
+Handler1106,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,True,easy,real_dataflow,ok,real,0.97,True,,1941,179,0,0.005672,openrouter_usage,3.91,stop,True
+Handler1133,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,pathtraver,True,hard,real_dataflow,ok,real,0.97,True,,2222,204,0,0.006484,openrouter_usage,2.1,stop,True
+Handler1205,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,cmdi,True,hard,real_dataflow,ok,real,0.9,True,,2694,197,0,0.007358,openrouter_usage,2.52,stop,True
+Handler1232,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,False,hard,false_positive,ok,false_positive,0.97,True,,2001,172,0,0.005722,openrouter_usage,3.18,stop,True
+Handler1299,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,trustbound,True,hard,real_dataflow,ok,real,0.93,True,,2408,179,0,0.006606,openrouter_usage,1.98,stop,True
+Handler1302,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,cmdi,False,hard,false_positive,ok,false_positive,0.97,True,,2431,186,0,0.006722,openrouter_usage,3.16,stop,True
+Handler1371,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,False,hard,false_positive,ok,false_positive,0.96,True,,2182,198,0,0.006344,openrouter_usage,2.55,stop,True
+Handler1444,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,ldapi,False,hard,false_positive,ok,false_positive,0.97,True,,3022,163,0,0.007674,openrouter_usage,2.03,stop,True
+Handler1550,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,trustbound,False,hard,false_positive,ok,false_positive,0.97,True,,2273,138,0,0.005926,openrouter_usage,2.03,stop,True
+Handler1560,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,weakrand,True,easy,real_api,ok,real,0.97,True,,2953,145,0,0.007356,openrouter_usage,2.02,stop,True
+Handler1629,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,False,brutal,false_positive,ok,false_positive,0.97,True,,2678,166,0,0.007016,openrouter_usage,2.04,stop,True
+Handler1740,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,cmdi,True,hard,real_dataflow,ok,real,0.8,True,,2937,227,0,0.008144,openrouter_usage,2.86,stop,True
+Handler1792,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,pathtraver,False,hard,false_positive,ok,false_positive,0.97,True,,2137,140,0,0.005674,openrouter_usage,1.76,stop,True
+Handler1879,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,cmdi,False,brutal,false_positive,ok,false_positive,0.97,True,,2512,147,0,0.006494,openrouter_usage,2.15,stop,True
+Handler2021,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,False,hard,false_positive,ok,false_positive,0.97,True,,1837,160,0,0.005274,openrouter_usage,2.19,stop,True
+Handler2064,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,False,hard,false_positive,ok,false_positive,0.96,True,,2020,204,0,0.00608,openrouter_usage,2.67,stop,True
+Handler2181,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,pathtraver,False,hard,false_positive,ok,false_positive,0.97,True,,2072,182,0,0.005964,openrouter_usage,2.12,stop,True
+Handler2317,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,trustbound,False,hard,false_positive,ok,false_positive,0.96,True,,2113,152,0,0.005746,openrouter_usage,2.03,stop,True
+Handler2413,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,pathtraver,False,brutal,false_positive,ok,false_positive,0.97,True,,2681,181,0,0.007172,openrouter_usage,3.12,stop,True
+Handler2681,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,True,hard,real_dataflow,ok,real,0.97,True,,1857,164,0,0.005354,openrouter_usage,1.92,stop,True
+Handler2794,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,False,hard,false_positive,ok,false_positive,0.97,True,,2139,137,0,0.005648,openrouter_usage,3.15,stop,True
+Handler2814,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,False,easy,false_positive,ok,false_positive,0.95,True,,1846,186,0,0.005552,openrouter_usage,3.09,stop,True
+Handler2837,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,True,hard,real_dataflow,ok,real,0.96,True,,2352,190,0,0.006604,openrouter_usage,2.06,stop,True
+Handler2852,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,True,hard,real_dataflow,ok,real,0.96,True,,2359,180,0,0.006518,openrouter_usage,2.36,stop,True
+Handler2863,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,cmdi,True,hard,real_dataflow,ok,real,0.95,True,,2848,194,0,0.007636,openrouter_usage,2.34,stop,True
+Handler2931,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,cmdi,False,hard,false_positive,ok,false_positive,0.96,True,,2263,232,0,0.006846,openrouter_usage,4.5,stop,True
+Handler3080,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,pathtraver,False,hard,false_positive,ok,false_positive,0.97,True,,2525,130,0,0.00635,openrouter_usage,1.83,stop,True
+Handler3442,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,False,hard,false_positive,ok,false_positive,0.96,True,,1967,173,0,0.005664,openrouter_usage,2.14,stop,True
+Handler3536,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,securecookie,True,easy,real_api,ok,real,0.97,True,,2271,139,0,0.005932,openrouter_usage,1.73,stop,True
+Handler3728,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,pathtraver,True,hard,real_dataflow,ok,real,0.95,True,,2571,201,0,0.007152,openrouter_usage,2.64,stop,True
+Handler3786,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,False,hard,false_positive,ok,false_positive,0.97,True,,2157,207,0,0.006384,openrouter_usage,2.44,stop,True
+Handler3813,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,pathtraver,False,brutal,false_positive,ok,false_positive,0.97,True,,2871,145,0,0.007192,openrouter_usage,2.02,stop,True
+Handler3940,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,cmdi,False,hard,false_positive,ok,false_positive,0.97,True,,2396,174,0,0.006532,openrouter_usage,2.13,stop,True
+Handler4009,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,True,hard,real_dataflow,ok,real,0.97,True,,1957,135,0,0.005264,openrouter_usage,1.91,stop,True
+Handler4033,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,cmdi,False,brutal,false_positive,ok,false_positive,0.97,True,,2381,162,0,0.006382,openrouter_usage,2.04,stop,True
+Handler4354,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,True,hard,real_dataflow,ok,real,0.97,True,,2158,195,0,0.006266,openrouter_usage,2.23,stop,True
+Handler4441,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,False,hard,false_positive,ok,false_positive,0.97,True,,2133,163,0,0.005896,openrouter_usage,2.23,stop,True
+Handler4477,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,ldapi,False,hard,false_positive,ok,false_positive,0.97,True,,2919,177,0,0.007608,openrouter_usage,2.24,stop,True
+Handler4684,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,False,hard,false_positive,ok,false_positive,0.97,True,,2496,144,0,0.006432,openrouter_usage,2.04,stop,True
+Handler4742,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,False,easy,false_positive,ok,false_positive,0.93,True,,1784,148,0,0.005048,openrouter_usage,2.13,stop,True
+Handler5022,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xpathi,True,hard,real_dataflow,ok,real,0.96,True,,2658,172,0,0.007036,openrouter_usage,2.53,stop,True
+Handler5066,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,pathtraver,True,easy,real_dataflow,ok,real,0.96,True,,2045,195,0,0.00604,openrouter_usage,2.26,stop,True
+Handler5118,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,weakrand,True,easy,real_api,ok,real,0.96,True,,3026,140,0,0.007452,openrouter_usage,2.1,stop,True
+Handler5158,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,pathtraver,True,hard,real_dataflow,ok,real,0.9,True,,2528,201,0,0.007066,openrouter_usage,2.55,stop,True
+Handler5204,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,True,easy,real_dataflow,ok,real,0.96,True,,1848,171,0,0.005406,openrouter_usage,2.22,stop,True
+Handler5241,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,pathtraver,True,hard,real_dataflow,ok,real,0.96,True,,2166,192,0,0.006252,openrouter_usage,2.24,stop,True
+Handler5244,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,crypto,True,easy,real_api,ok,real,0.97,True,,3637,177,0,0.009044,openrouter_usage,2.23,stop,True
+Handler5246,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,True,easy,real_dataflow,ok,real,0.97,True,,1730,142,0,0.00488,openrouter_usage,2.02,stop,True
+Handler5272,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,hash,True,easy,real_api,ok,real,0.96,True,,2611,145,0,0.006672,openrouter_usage,2.03,stop,True
+Handler5282,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,ldapi,False,brutal,false_positive,ok,false_positive,0.97,True,,3130,184,0,0.0081,openrouter_usage,2.03,stop,True
+Handler5323,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xpathi,True,hard,real_dataflow,ok,real,0.97,True,,2719,175,0,0.007188,openrouter_usage,2.23,stop,True
+Handler5395,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,True,hard,real_dataflow,ok,real,0.95,True,,1931,151,0,0.005372,openrouter_usage,1.93,stop,True
+Handler5722,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,pathtraver,False,hard,false_positive,ok,false_positive,0.97,True,,2580,189,0,0.00705,openrouter_usage,2.24,stop,True
+Handler5813,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,True,easy,real_dataflow,ok,real,0.93,True,,2008,182,0,0.005836,openrouter_usage,2.34,stop,True
+Handler6050,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,False,hard,false_positive,ok,false_positive,0.97,True,,2056,154,0,0.005652,openrouter_usage,2.23,stop,True
+Handler6075,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,cmdi,True,hard,real_dataflow,ok,real,0.93,True,,2525,219,0,0.00724,openrouter_usage,2.28,stop,True
+Handler6116,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,cmdi,False,hard,false_positive,ok,false_positive,0.97,True,,2762,156,0,0.007084,openrouter_usage,1.82,stop,True
+Handler6183,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,hash,True,easy,real_api,ok,real,0.95,True,,2598,169,0,0.006886,openrouter_usage,2.04,stop,True
+Handler6359,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,weakrand,True,easy,real_api,ok,real,0.96,True,,2838,145,0,0.007126,openrouter_usage,2.02,stop,True
+Handler6396,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,True,hard,real_dataflow,ok,real,0.96,True,,2171,195,0,0.006292,openrouter_usage,2.34,stop,True
+Handler6472,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,False,hard,false_positive,ok,false_positive,0.97,True,,1810,124,0,0.00486,openrouter_usage,1.67,stop,True
+Handler6540,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,pathtraver,False,hard,false_positive,ok,false_positive,0.97,True,,2152,180,0,0.006104,openrouter_usage,2.08,stop,True
+Handler6650,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,False,brutal,false_positive,ok,false_positive,0.97,True,,2322,155,0,0.006194,openrouter_usage,2.04,stop,True
+Handler6775,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,False,easy,false_positive,ok,false_positive,0.93,True,,2101,190,0,0.006102,openrouter_usage,2.43,stop,True
+Handler6833,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,True,hard,real_dataflow,ok,real,0.96,True,,2226,194,0,0.006392,openrouter_usage,2.64,stop,True
+Handler6881,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,True,easy,real_dataflow,ok,real,0.96,True,,1850,182,0,0.00552,openrouter_usage,2.65,stop,True
+Handler7056,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,False,hard,false_positive,ok,false_positive,0.97,True,,1953,160,0,0.005506,openrouter_usage,2.23,stop,True
+Handler7109,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,crypto,True,easy,real_api,ok,real,0.97,True,,3337,189,0,0.008564,openrouter_usage,2.01,stop,True
+Handler7317,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,False,easy,false_positive,ok,false_positive,0.96,True,,2047,163,0,0.005724,openrouter_usage,2.75,stop,True
+Handler7456,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,pathtraver,False,hard,false_positive,ok,false_positive,0.97,True,,2753,180,0,0.007306,openrouter_usage,2.33,stop,True
+Handler7486,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,True,hard,real_dataflow,ok,real,0.97,True,,2731,172,0,0.007182,openrouter_usage,2.16,stop,True
+Handler7840,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,False,hard,false_positive,ok,false_positive,0.97,True,,2007,168,0,0.005694,openrouter_usage,2.22,stop,True
+Handler7916,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,False,hard,false_positive,ok,false_positive,0.97,True,,2304,157,0,0.006178,openrouter_usage,2.84,stop,True
+Handler7976,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,weakrand,True,easy,real_api,ok,real,0.96,True,,2939,166,0,0.007538,openrouter_usage,2.51,stop,True
+Handler7982,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,ldapi,True,hard,real_dataflow,ok,real,0.95,True,,3277,211,0,0.008664,openrouter_usage,2.64,stop,True
+Handler8082,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,True,easy,real_dataflow,ok,real,0.98,True,,2147,157,0,0.005864,openrouter_usage,2.03,stop,True
+Handler8239,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,trustbound,True,easy,real_dataflow,ok,real,0.8,True,,2121,177,0,0.006012,openrouter_usage,2.03,stop,True
+Handler8243,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,cmdi,False,hard,false_positive,ok,false_positive,0.97,True,,2511,165,0,0.006672,openrouter_usage,2.04,stop,True
+Handler8264,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,pathtraver,False,brutal,false_positive,ok,false_positive,0.97,True,,2787,151,0,0.007084,openrouter_usage,2.12,stop,True
+Handler8295,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,True,hard,real_dataflow,ok,real,0.97,True,,2094,172,0,0.005908,openrouter_usage,2.01,stop,True
+Handler8373,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,False,hard,false_positive,ok,false_positive,0.97,True,,1740,136,0,0.00484,openrouter_usage,1.73,stop,True
+Handler8449,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,True,easy,real_dataflow,ok,real,0.95,True,,1956,194,0,0.005852,openrouter_usage,2.44,stop,True
+Handler8450,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,pathtraver,True,easy,real_dataflow,ok,real,0.96,True,,2115,175,0,0.00598,openrouter_usage,2.24,stop,True
+Handler8504,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,True,hard,real_dataflow,ok,real,0.97,True,,2019,173,0,0.005768,openrouter_usage,2.64,stop,True
+Handler8770,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,True,easy,real_dataflow,ok,real,0.97,True,,2072,177,0,0.005914,openrouter_usage,3.17,stop,True
+Handler8806,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,True,brutal,real_dataflow,ok,real,0.96,True,,2306,179,0,0.006402,openrouter_usage,2.22,stop,True
+Handler9001,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,cmdi,False,brutal,false_positive,ok,false_positive,0.96,True,,2484,177,0,0.006738,openrouter_usage,2.03,stop,True
+Handler9295,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xss,False,hard,false_positive,ok,false_positive,0.97,True,,1739,166,0,0.005138,openrouter_usage,2.23,stop,True
+Handler9375,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,False,hard,false_positive,ok,false_positive,0.97,True,,2015,159,0,0.00562,openrouter_usage,2.03,stop,True
+Handler9453,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,pathtraver,False,brutal,false_positive,ok,false_positive,0.97,True,,2674,151,0,0.006858,openrouter_usage,2.02,stop,True
+Handler9566,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,cmdi,False,brutal,false_positive,ok,false_positive,0.96,True,,2605,208,0,0.00729,openrouter_usage,2.84,stop,True
+Handler9643,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,cmdi,True,easy,real_dataflow,ok,real,0.93,True,,2463,205,0,0.006976,openrouter_usage,2.56,stop,True
+Handler9705,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,xpathi,False,hard,false_positive,ok,false_positive,0.97,True,,2943,155,0,0.007436,openrouter_usage,2.64,stop,True
+Handler9715,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,True,hard,real_dataflow,ok,real,0.96,True,,2123,165,0,0.005896,openrouter_usage,2.11,stop,True
+Handler9790,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,True,hard,real_dataflow,ok,real,0.98,True,,2064,141,0,0.005538,openrouter_usage,2.21,stop,True
+Handler9797,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,sqli,False,hard,false_positive,ok,false_positive,0.96,True,,2305,192,0,0.00653,openrouter_usage,2.02,stop,True
+Handler9799,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,securecookie,True,easy,real_api,ok,real,0.97,True,,2235,153,0,0.006,openrouter_usage,2.03,stop,True
+Handler9857,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,weakrand,True,easy,real_api,ok,real,0.97,True,,2637,155,0,0.006824,openrouter_usage,3.1,stop,True
+Handler9885,anthropic/claude-sonnet-5.5,google-vertex/global,low,Google,crypto,True,brutal,real_api,ok,real,0.97,True,,3429,207,0,0.008928,openrouter_usage,2.63,stop,True
+Handler1023,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,False,brutal,false_positive,ok,false_positive,0.96,True,,2845,447,359,0.006644,openrouter_usage,4.49,stop,True
+Handler1106,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,True,easy,real_dataflow,ok,real,0.96,True,,2368,298,209,0.004796,openrouter_usage,4.04,stop,True
+Handler1133,x-ai/grok-4.7,xai/zdr,low,xAI,pathtraver,True,hard,real_dataflow,ok,real,0.95,True,,2596,267,164,0.005066,openrouter_usage,3.98,stop,True
+Handler1205,x-ai/grok-4.7,xai/zdr,low,xAI,cmdi,True,hard,real_dataflow,ok,real,0.86,True,,2893,822,711,0.00899,openrouter_usage,11.13,stop,True
+Handler1232,x-ai/grok-4.7,xai/zdr,low,xAI,xss,False,hard,false_positive,ok,false_positive,0.96,True,,2451,373,282,0.005412,openrouter_usage,3.44,stop,True
+Handler1299,x-ai/grok-4.7,xai/zdr,low,xAI,trustbound,True,hard,real_dataflow,ok,real,0.9,True,,2715,300,202,0.005502,openrouter_usage,4.28,stop,True
+Handler1302,x-ai/grok-4.7,xai/zdr,low,xAI,cmdi,False,hard,false_positive,ok,false_positive,0.96,True,,2764,512,425,0.006872,openrouter_usage,6.27,stop,True
+Handler1371,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,False,hard,false_positive,ok,false_positive,0.95,True,,2544,575,479,0.00681,openrouter_usage,6.23,stop,True
+Handler1444,x-ai/grok-4.7,xai/zdr,low,xAI,ldapi,False,hard,false_positive,ok,false_positive,0.96,True,,3111,479,367,0.007368,openrouter_usage,11.61,stop,True
+Handler1550,x-ai/grok-4.7,xai/zdr,low,xAI,trustbound,False,hard,false_positive,ok,false_positive,0.96,True,,2634,372,280,0.005772,openrouter_usage,5.19,stop,True
+Handler1560,x-ai/grok-4.7,xai/zdr,low,xAI,weakrand,True,easy,real_api,ok,real,0.95,True,,3048,485,373,0.007278,openrouter_usage,5.93,stop,True
+Handler1629,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,False,brutal,false_positive,ok,false_positive,0.96,True,,2895,518,428,0.00717,openrouter_usage,5.81,stop,True
+Handler1740,x-ai/grok-4.7,xai/zdr,low,xAI,cmdi,True,hard,real_dataflow,ok,real,0.86,True,,3048,1215,1076,0.011658,openrouter_usage,17.71,stop,True
+Handler1792,x-ai/grok-4.7,xai/zdr,low,xAI,pathtraver,False,hard,false_positive,ok,false_positive,0.97,True,,2541,338,223,0.005382,openrouter_usage,4.04,stop,True
+Handler1879,x-ai/grok-4.7,xai/zdr,low,xAI,cmdi,False,brutal,false_positive,ok,false_positive,0.95,True,,2793,330,239,0.005838,openrouter_usage,3.87,stop,True
+Handler2021,x-ai/grok-4.7,xai/zdr,low,xAI,xss,False,hard,false_positive,ok,false_positive,0.96,True,,2335,369,282,0.005156,openrouter_usage,4.28,stop,True
+Handler2064,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,False,hard,false_positive,ok,false_positive,0.96,True,,2442,389,303,0.00549,openrouter_usage,5.14,stop,True
+Handler2181,x-ai/grok-4.7,xai/zdr,low,xAI,pathtraver,False,hard,false_positive,ok,false_positive,0.96,True,,2499,460,331,0.00603,openrouter_usage,5.68,stop,True
+Handler2317,x-ai/grok-4.7,xai/zdr,low,xAI,trustbound,False,hard,false_positive,ok,false_positive,0.98,True,,2527,313,227,0.005204,openrouter_usage,4.08,stop,True
+Handler2413,x-ai/grok-4.7,xai/zdr,low,xAI,pathtraver,False,brutal,false_positive,ok,false_positive,0.96,True,,2903,444,338,0.006742,openrouter_usage,10.1,stop,True
+Handler2681,x-ai/grok-4.7,xai/zdr,low,xAI,xss,True,hard,real_dataflow,ok,real,0.96,True,,2349,317,235,0.004872,openrouter_usage,4.77,stop,True
+Handler2794,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,False,hard,false_positive,ok,false_positive,0.95,True,,2522,828,738,0.008284,openrouter_usage,10.94,stop,True
+Handler2814,x-ai/grok-4.7,xai/zdr,low,xAI,xss,False,easy,false_positive,ok,false_positive,0.92,True,,2345,426,344,0.005518,openrouter_usage,6.73,stop,True
+Handler2837,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,True,hard,real_dataflow,ok,real,0.93,True,,2689,517,406,0.006752,openrouter_usage,6.33,stop,True
+Handler2852,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,True,hard,real_dataflow,ok,real,0.92,True,,2669,375,278,0.00586,openrouter_usage,5.34,stop,True
+Handler2863,x-ai/grok-4.7,xai/zdr,low,xAI,cmdi,True,hard,real_dataflow,ok,real,0.96,True,,3032,1010,912,0.010396,openrouter_usage,12.95,stop,True
+Handler2931,x-ai/grok-4.7,xai/zdr,low,xAI,cmdi,False,hard,false_positive,ok,false_positive,0.93,True,,2636,682,588,0.007636,openrouter_usage,9.53,stop,True
+Handler3080,x-ai/grok-4.7,xai/zdr,low,xAI,pathtraver,False,hard,false_positive,ok,false_positive,0.96,True,,2808,489,394,0.006822,openrouter_usage,5.79,stop,True
+Handler3442,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,False,hard,false_positive,ok,false_positive,0.97,True,,2401,482,376,0.005966,openrouter_usage,6.44,stop,True
+Handler3536,x-ai/grok-4.7,xai/zdr,low,xAI,securecookie,True,easy,real_api,ok,real,0.96,True,,2607,307,227,0.0035376,openrouter_usage,22.27,stop,True
+Handler3728,x-ai/grok-4.7,xai/zdr,low,xAI,pathtraver,True,hard,real_dataflow,ok,real,0.88,True,,2833,1130,1019,0.010718,openrouter_usage,14.84,stop,True
+Handler3786,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,False,hard,false_positive,ok,false_positive,0.96,True,,2531,945,837,0.009004,openrouter_usage,10.12,stop,True
+Handler3813,x-ai/grok-4.7,xai/zdr,low,xAI,pathtraver,False,brutal,false_positive,ok,false_positive,0.96,True,,3029,427,327,0.006892,openrouter_usage,5.74,stop,True
+Handler3940,x-ai/grok-4.7,xai/zdr,low,xAI,cmdi,False,hard,false_positive,ok,false_positive,0.97,True,,2734,529,435,0.006914,openrouter_usage,6.93,stop,True
+Handler4009,x-ai/grok-4.7,xai/zdr,low,xAI,xss,True,hard,real_dataflow,ok,real,0.95,True,,2417,239,148,0.00454,openrouter_usage,3.81,stop,True
+Handler4033,x-ai/grok-4.7,xai/zdr,low,xAI,cmdi,False,brutal,false_positive,ok,false_positive,0.96,True,,2702,414,324,0.00616,openrouter_usage,5.26,stop,True
+Handler4354,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,True,hard,real_dataflow,ok,real,0.96,True,,2517,372,275,0.00477,openrouter_usage,4.53,stop,True
+Handler4441,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,False,hard,false_positive,ok,false_positive,0.95,True,,2515,453,346,0.005252,openrouter_usage,5.29,stop,True
+Handler4477,x-ai/grok-4.7,xai/zdr,low,xAI,ldapi,False,hard,false_positive,ok,false_positive,0.96,True,,3057,416,310,0.006882,openrouter_usage,4.27,stop,True
+Handler4684,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,False,hard,false_positive,ok,false_positive,0.96,True,,2770,947,845,0.009494,openrouter_usage,10.84,stop,True
+Handler4742,x-ai/grok-4.7,xai/zdr,low,xAI,xss,False,easy,false_positive,ok,false_positive,0.9,True,,2298,287,201,0.00459,openrouter_usage,4.29,stop,True
+Handler5022,x-ai/grok-4.7,xai/zdr,low,xAI,xpathi,True,hard,real_dataflow,ok,real,0.93,True,,2833,422,329,0.008198,openrouter_usage,5.47,stop,True
+Handler5066,x-ai/grok-4.7,xai/zdr,low,xAI,pathtraver,True,easy,real_dataflow,ok,real,0.92,True,,2480,411,296,0.005698,openrouter_usage,5.83,stop,True
+Handler5118,x-ai/grok-4.7,xai/zdr,low,xAI,weakrand,True,easy,real_api,ok,real,0.95,True,,3112,367,268,0.006698,openrouter_usage,4.75,stop,True
+Handler5158,x-ai/grok-4.7,xai/zdr,low,xAI,pathtraver,True,hard,real_dataflow,ok,real,0.93,True,,2796,603,480,0.007482,openrouter_usage,7.02,stop,True
+Handler5204,x-ai/grok-4.7,xai/zdr,low,xAI,xss,True,easy,real_dataflow,ok,real,0.93,True,,2342,406,317,0.005392,openrouter_usage,6.52,stop,True
+Handler5241,x-ai/grok-4.7,xai/zdr,low,xAI,pathtraver,True,hard,real_dataflow,ok,real,0.92,True,,2558,538,437,0.006616,openrouter_usage,6.52,stop,True
+Handler5244,x-ai/grok-4.7,xai/zdr,low,xAI,crypto,True,easy,real_api,ok,real,0.97,True,,3519,264,181,0.006894,openrouter_usage,5.08,stop,True
+Handler5246,x-ai/grok-4.7,xai/zdr,low,xAI,xss,True,easy,real_dataflow,ok,real,0.96,True,,2263,268,185,0.004406,openrouter_usage,3.54,stop,True
+Handler5272,x-ai/grok-4.7,xai/zdr,low,xAI,hash,True,easy,real_api,ok,real,0.96,True,,2854,413,329,0.006458,openrouter_usage,5.9,stop,True
+Handler5282,x-ai/grok-4.7,xai/zdr,low,xAI,ldapi,False,brutal,false_positive,ok,false_positive,0.98,True,,3163,544,428,0.007862,openrouter_usage,5.5,stop,True
+Handler5323,x-ai/grok-4.7,xai/zdr,low,xAI,xpathi,True,hard,real_dataflow,ok,real,0.95,True,,2911,296,207,0.005102,openrouter_usage,3.65,stop,True
+Handler5395,x-ai/grok-4.7,xai/zdr,low,xAI,xss,True,hard,real_dataflow,ok,real,0.96,True,,2394,278,198,0.004728,openrouter_usage,4.79,stop,True
+Handler5722,x-ai/grok-4.7,xai/zdr,low,xAI,pathtraver,False,hard,false_positive,ok,false_positive,0.96,True,,2853,347,244,0.0039204,openrouter_usage,70.51,stop,True
+Handler5813,x-ai/grok-4.7,xai/zdr,low,xAI,xss,True,easy,real_dataflow,ok,real,0.93,True,,2451,294,208,0.004938,openrouter_usage,4.26,stop,True
+Handler6050,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,False,hard,false_positive,ok,false_positive,0.96,True,,2462,447,347,0.00511,openrouter_usage,5.2,stop,True
+Handler6075,x-ai/grok-4.7,xai/zdr,low,xAI,cmdi,True,hard,real_dataflow,ok,real,0.9,True,,2781,1252,1136,0.011346,openrouter_usage,16.43,stop,True
+Handler6116,x-ai/grok-4.7,xai/zdr,low,xAI,cmdi,False,hard,false_positive,ok,false_positive,0.96,True,,2989,634,519,0.007286,openrouter_usage,6.94,stop,True
+Handler6183,x-ai/grok-4.7,xai/zdr,low,xAI,hash,True,easy,real_api,ok,real,0.96,True,,2846,534,443,0.007168,openrouter_usage,5.8,stop,True
+Handler6359,x-ai/grok-4.7,xai/zdr,low,xAI,weakrand,True,easy,real_api,ok,real,0.95,True,,2989,392,290,0.006602,openrouter_usage,4.15,stop,True
+Handler6396,x-ai/grok-4.7,xai/zdr,low,xAI,xss,True,hard,real_dataflow,ok,real,0.92,True,,2565,381,295,0.005688,openrouter_usage,4.7,stop,True
+Handler6472,x-ai/grok-4.7,xai/zdr,low,xAI,xss,False,hard,false_positive,ok,false_positive,0.96,True,,2322,452,367,0.00486,openrouter_usage,5.76,stop,True
+Handler6540,x-ai/grok-4.7,xai/zdr,low,xAI,pathtraver,False,hard,false_positive,ok,false_positive,0.95,True,,2544,462,335,0.005364,openrouter_usage,5.79,stop,True
+Handler6650,x-ai/grok-4.7,xai/zdr,low,xAI,xss,False,brutal,false_positive,ok,false_positive,0.96,True,,2679,336,260,0.005646,openrouter_usage,4.17,stop,True
+Handler6775,x-ai/grok-4.7,xai/zdr,low,xAI,xss,False,easy,false_positive,ok,false_positive,0.86,True,,2503,660,563,0.007238,openrouter_usage,9.22,stop,True
+Handler6833,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,True,hard,real_dataflow,ok,real,0.95,True,,2561,385,306,0.005704,openrouter_usage,5.46,stop,True
+Handler6881,x-ai/grok-4.7,xai/zdr,low,xAI,xss,True,easy,real_dataflow,ok,real,0.96,True,,2355,440,355,0.004854,openrouter_usage,5.49,stop,True
+Handler7056,x-ai/grok-4.7,xai/zdr,low,xAI,xss,False,hard,false_positive,ok,false_positive,0.96,True,,2428,378,291,0.005396,openrouter_usage,4.83,stop,True
+Handler7109,x-ai/grok-4.7,xai/zdr,low,xAI,crypto,True,easy,real_api,ok,real,0.97,True,,3311,314,211,0.00601,openrouter_usage,3.62,stop,True
+Handler7317,x-ai/grok-4.7,xai/zdr,low,xAI,xss,False,easy,false_positive,ok,false_positive,0.92,True,,2464,382,296,0.005492,openrouter_usage,6.58,stop,True
+Handler7456,x-ai/grok-4.7,xai/zdr,low,xAI,pathtraver,False,hard,false_positive,ok,false_positive,0.96,True,,2933,387,289,0.00646,openrouter_usage,4.95,stop,True
+Handler7486,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,True,hard,real_dataflow,ok,real,0.96,True,,2918,436,316,0.006724,openrouter_usage,5.67,stop,True
+Handler7840,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,False,hard,false_positive,ok,false_positive,0.96,True,,2430,639,548,0.006198,openrouter_usage,7.83,stop,True
+Handler7916,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,False,hard,false_positive,ok,false_positive,0.96,True,,2602,760,664,0.008036,openrouter_usage,9.21,stop,True
+Handler7976,x-ai/grok-4.7,xai/zdr,low,xAI,weakrand,True,easy,real_api,ok,real,0.95,True,,3053,419,316,0.006892,openrouter_usage,5.46,stop,True
+Handler7982,x-ai/grok-4.7,xai/zdr,low,xAI,ldapi,True,hard,real_dataflow,ok,real,0.92,True,,3245,469,353,0.007576,openrouter_usage,6.54,stop,True
+Handler8082,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,True,easy,real_dataflow,ok,real,0.96,True,,2524,290,201,0.00506,openrouter_usage,3.62,stop,True
+Handler8239,x-ai/grok-4.7,xai/zdr,low,xAI,trustbound,True,easy,real_dataflow,ok,real,0.86,True,,2521,735,633,0.007724,openrouter_usage,10.63,stop,True
+Handler8243,x-ai/grok-4.7,xai/zdr,low,xAI,cmdi,False,hard,false_positive,ok,false_positive,0.97,True,,2826,482,383,0.006048,openrouter_usage,5.91,stop,True
+Handler8264,x-ai/grok-4.7,xai/zdr,low,xAI,pathtraver,False,brutal,false_positive,ok,false_positive,0.96,True,,2981,497,393,0.007216,openrouter_usage,5.73,stop,True
+Handler8295,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,True,hard,real_dataflow,ok,real,0.96,True,,2495,423,311,0.0058,openrouter_usage,4.37,stop,True
+Handler8373,x-ai/grok-4.7,xai/zdr,low,xAI,xss,False,hard,false_positive,ok,false_positive,0.96,True,,2273,362,254,0.00499,openrouter_usage,4.52,stop,True
+Handler8449,x-ai/grok-4.7,xai/zdr,low,xAI,xss,True,easy,real_dataflow,ok,real,0.92,True,,2418,601,509,0.005946,openrouter_usage,9.9,stop,True
+Handler8450,x-ai/grok-4.7,xai/zdr,low,xAI,pathtraver,True,easy,real_dataflow,ok,real,0.92,True,,2525,401,294,0.005728,openrouter_usage,5.55,stop,True
+Handler8504,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,True,hard,real_dataflow,ok,real,0.98,True,,2440,277,182,0.004814,openrouter_usage,4.2,stop,True
+Handler8770,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,True,easy,real_dataflow,ok,real,0.96,True,,2470,414,305,0.005696,openrouter_usage,5.51,stop,True
+Handler8806,x-ai/grok-4.7,xai/zdr,low,xAI,xss,True,brutal,real_dataflow,ok,real,0.95,True,,2665,741,642,0.009776,openrouter_usage,10.49,stop,True
+Handler9001,x-ai/grok-4.7,xai/zdr,low,xAI,cmdi,False,brutal,false_positive,ok,false_positive,0.96,True,,2772,476,386,0.005904,openrouter_usage,5.83,stop,True
+Handler9295,x-ai/grok-4.7,xai/zdr,low,xAI,xss,False,hard,false_positive,ok,false_positive,0.96,True,,2275,504,418,0.005078,openrouter_usage,5.56,stop,True
+Handler9375,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,False,hard,false_positive,ok,false_positive,0.97,True,,2414,528,435,0.006268,openrouter_usage,6.58,stop,True
+Handler9453,x-ai/grok-4.7,xai/zdr,low,xAI,pathtraver,False,brutal,false_positive,ok,false_positive,0.97,True,,2895,510,416,0.007122,openrouter_usage,4.94,stop,True
+Handler9566,x-ai/grok-4.7,xai/zdr,low,xAI,cmdi,False,brutal,false_positive,ok,false_positive,0.96,True,,2854,470,385,0.0068,openrouter_usage,5.55,stop,True
+Handler9643,x-ai/grok-4.7,xai/zdr,low,xAI,cmdi,True,easy,real_dataflow,ok,false_positive,0.86,False,,2746,946,836,0.00944,openrouter_usage,13.57,stop,True
+Handler9705,x-ai/grok-4.7,xai/zdr,low,xAI,xpathi,False,hard,false_positive,ok,false_positive,0.97,True,,3028,337,251,0.005582,openrouter_usage,3.95,stop,True
+Handler9715,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,True,hard,real_dataflow,ok,real,0.92,True,,2516,474,382,0.006148,openrouter_usage,4.45,stop,True
+Handler9790,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,True,hard,real_dataflow,ok,real,0.96,True,,2476,370,278,0.005444,openrouter_usage,4.37,stop,True
+Handler9797,x-ai/grok-4.7,xai/zdr,low,xAI,sqli,False,hard,false_positive,ok,false_positive,0.96,True,,2609,797,705,0.008272,openrouter_usage,10.87,stop,True
+Handler9799,x-ai/grok-4.7,xai/zdr,low,xAI,securecookie,True,easy,real_api,ok,real,0.98,True,,2581,241,168,0.004112,openrouter_usage,3.5,stop,True
+Handler9857,x-ai/grok-4.7,xai/zdr,low,xAI,weakrand,True,easy,real_api,ok,real,0.96,True,,2870,379,276,0.006286,openrouter_usage,4.92,stop,True
+Handler9885,x-ai/grok-4.7,xai/zdr,low,xAI,crypto,True,brutal,real_api,ok,real,0.97,True,,3392,276,198,0.005944,openrouter_usage,3.34,stop,True
+Handler1023,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,False,brutal,false_positive,ok,false_positive,0.99,True,,1461,104,15,0.0023455,openrouter_usage,2.22,stop,True
+Handler1106,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,True,easy,real_dataflow,ok,real,0.99,True,,1022,89,15,0.001467,openrouter_usage,1.76,stop,True
+Handler1133,openai/gpt-6-sol,openai/flex,low,OpenAI,pathtraver,True,hard,real_dataflow,ok,real,0.99,True,,1244,127,28,0.00218925,openrouter_usage,2.32,stop,True
+Handler1205,openai/gpt-6-sol,openai/flex,low,OpenAI,cmdi,True,hard,real_dataflow,ok,real,0.99,True,,1531,189,94,0.002858,openrouter_usage,2.72,stop,True
+Handler1232,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,False,hard,false_positive,ok,false_positive,0.99,True,,1121,112,25,0.0019605,openrouter_usage,2.62,stop,True
+Handler1299,openai/gpt-6-sol,openai/flex,low,OpenAI,trustbound,True,hard,real_dataflow,ok,real,0.99,True,,1355,88,0,0.002133,openrouter_usage,1.42,stop,True
+Handler1302,openai/gpt-6-sol,openai/flex,low,OpenAI,cmdi,False,hard,false_positive,ok,false_positive,0.99,True,,1406,113,27,0.00232175,openrouter_usage,3.32,stop,True
+Handler1371,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,False,hard,false_positive,ok,false_positive,0.99,True,,1188,140,49,0.00218425,openrouter_usage,2.72,stop,True
+Handler1444,openai/gpt-6-sol,openai/flex,low,OpenAI,ldapi,False,hard,false_positive,ok,false_positive,0.99,True,,1706,98,0,0.00262175,openrouter_usage,2.2,stop,True
+Handler1550,openai/gpt-6-sol,openai/flex,low,OpenAI,trustbound,False,hard,false_positive,ok,false_positive,0.99,True,,1284,98,16,0.00209425,openrouter_usage,2.63,stop,True
+Handler1560,openai/gpt-6-sol,openai/flex,low,OpenAI,weakrand,True,easy,real_api,ok,real,0.99,True,,1659,79,0,0.002468,openrouter_usage,1.28,stop,True
+Handler1629,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,False,brutal,false_positive,ok,false_positive,0.99,True,,1508,115,20,0.00245925,openrouter_usage,1.7,stop,True
+Handler1740,openai/gpt-6-sol,openai/flex,low,OpenAI,cmdi,True,hard,real_dataflow,ok,real,0.99,True,,1672,172,76,0.00294925,openrouter_usage,2.34,stop,True
+Handler1792,openai/gpt-6-sol,openai/flex,low,OpenAI,pathtraver,False,hard,false_positive,ok,false_positive,0.99,True,,1196,103,23,0.00200925,openrouter_usage,2.58,stop,True
+Handler1879,openai/gpt-6-sol,openai/flex,low,OpenAI,cmdi,False,brutal,false_positive,ok,false_positive,0.99,True,,1425,111,20,0.0023355,openrouter_usage,1.52,stop,True
+Handler2021,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,False,hard,false_positive,ok,false_positive,0.99,True,,1008,116,24,0.001588,openrouter_usage,2.33,stop,True
+Handler2064,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,False,hard,false_positive,ok,false_positive,0.99,True,,1100,124,29,0.00199425,openrouter_usage,2.61,stop,True
+Handler2181,openai/gpt-6-sol,openai/flex,low,OpenAI,pathtraver,False,hard,false_positive,ok,false_positive,0.99,True,,1161,118,31,0.0020405,openrouter_usage,2.15,stop,True
+Handler2317,openai/gpt-6-sol,openai/flex,low,OpenAI,trustbound,False,hard,false_positive,ok,false_positive,0.99,True,,1186,95,23,0.00195675,openrouter_usage,2.06,stop,True
+Handler2413,openai/gpt-6-sol,openai/flex,low,OpenAI,pathtraver,False,brutal,false_positive,ok,false_positive,0.99,True,,1541,117,25,0.0025105,openrouter_usage,2.99,stop,True
+Handler2681,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,True,hard,real_dataflow,ok,real,0.99,True,,1017,89,0,0.001462,openrouter_usage,1.78,stop,True
+Handler2794,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,False,hard,false_positive,ok,false_positive,0.99,True,,1176,108,28,0.00200925,openrouter_usage,1.75,stop,True
+Handler2814,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,False,easy,false_positive,ok,false_positive,0.99,True,,1007,108,29,0.001547,openrouter_usage,2.73,stop,True
+Handler2837,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,True,hard,real_dataflow,ok,real,0.99,True,,1334,121,37,0.00227175,openrouter_usage,1.76,stop,True
+Handler2852,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,True,hard,real_dataflow,ok,real,0.99,True,,1315,112,33,0.002203,openrouter_usage,1.98,stop,True
+Handler2863,openai/gpt-6-sol,openai/flex,low,OpenAI,cmdi,True,hard,real_dataflow,ok,real,0.99,True,,1643,150,53,0.002803,openrouter_usage,3.44,stop,True
+Handler2931,openai/gpt-6-sol,openai/flex,low,OpenAI,cmdi,False,hard,false_positive,ok,false_positive,0.99,True,,1281,130,45,0.0022505,openrouter_usage,2.53,stop,True
+Handler3080,openai/gpt-6-sol,openai/flex,low,OpenAI,pathtraver,False,hard,false_positive,ok,false_positive,0.99,True,,1451,102,17,0.002323,openrouter_usage,2.12,stop,True
+Handler3442,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,False,hard,false_positive,ok,false_positive,0.99,True,,1061,89,23,0.0017705,openrouter_usage,2.41,stop,True
+Handler3536,openai/gpt-6-sol,openai/flex,low,OpenAI,securecookie,True,easy,real_api,ok,real,0.99,True,,1255,82,16,0.001978,openrouter_usage,1.78,stop,True
+Handler3728,openai/gpt-6-sol,openai/flex,low,OpenAI,pathtraver,True,hard,real_dataflow,ok,real,0.99,True,,1479,107,17,0.002383,openrouter_usage,2.44,stop,True
+Handler3786,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,False,hard,false_positive,ok,false_positive,0.99,True,,1187,129,41,0.002128,openrouter_usage,2.46,stop,True
+Handler3813,openai/gpt-6-sol,openai/flex,low,OpenAI,pathtraver,False,brutal,false_positive,ok,false_positive,0.99,True,,1640,113,25,0.00261425,openrouter_usage,2.37,stop,True
+Handler3940,openai/gpt-6-sol,openai/flex,low,OpenAI,cmdi,False,hard,false_positive,ok,false_positive,0.99,True,,1378,112,28,0.00228175,openrouter_usage,2.62,stop,True
+Handler4009,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,True,hard,real_dataflow,ok,real,0.99,True,,1082,77,0,0.00173675,openrouter_usage,1.21,stop,True
+Handler4033,openai/gpt-6-sol,openai/flex,low,OpenAI,cmdi,False,brutal,false_positive,ok,false_positive,0.99,True,,1348,110,29,0.00223425,openrouter_usage,2.42,stop,True
+Handler4354,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,True,hard,real_dataflow,ok,real,0.99,True,,1162,123,32,0.00206675,openrouter_usage,1.8,stop,True
+Handler4441,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,False,hard,false_positive,ok,false_positive,0.99,True,,1164,105,25,0.00197925,openrouter_usage,1.52,stop,True
+Handler4477,openai/gpt-6-sol,openai/flex,low,OpenAI,ldapi,False,hard,false_positive,ok,false_positive,0.99,True,,1650,81,0,0.00246675,openrouter_usage,1.46,stop,True
+Handler4684,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,False,hard,false_positive,ok,false_positive,0.99,True,,1418,85,0,0.00219675,openrouter_usage,1.6,stop,True
+Handler4742,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,False,easy,false_positive,ok,false_positive,0.99,True,,967,121,33,0.001572,openrouter_usage,2.58,stop,True
+Handler5022,openai/gpt-6-sol,openai/flex,low,OpenAI,xpathi,True,hard,real_dataflow,ok,real,0.99,True,,1446,102,19,0.00231675,openrouter_usage,2.38,stop,True
+Handler5066,openai/gpt-6-sol,openai/flex,low,OpenAI,pathtraver,True,easy,real_dataflow,ok,real,0.99,True,,1131,137,38,0.002098,openrouter_usage,2.72,stop,True
+Handler5118,openai/gpt-6-sol,openai/flex,low,OpenAI,weakrand,True,easy,real_api,ok,real,0.99,True,,1726,79,0,0.00255175,openrouter_usage,1.39,stop,True
+Handler5158,openai/gpt-6-sol,openai/flex,low,OpenAI,pathtraver,True,hard,real_dataflow,ok,real,0.99,True,,1425,120,24,0.0023805,openrouter_usage,2.11,stop,True
+Handler5204,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,True,easy,real_dataflow,ok,real,0.99,True,,1012,136,51,0.001692,openrouter_usage,2.53,stop,True
+Handler5241,openai/gpt-6-sol,openai/flex,low,OpenAI,pathtraver,True,hard,real_dataflow,ok,real,0.99,True,,1212,107,16,0.00204925,openrouter_usage,2.19,stop,True
+Handler5244,openai/gpt-6-sol,openai/flex,low,OpenAI,crypto,True,easy,real_api,ok,real,0.99,True,,2077,90,0,0.0030455,openrouter_usage,1.61,stop,True
+Handler5246,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,True,easy,real_dataflow,ok,real,0.99,True,,937,79,0,0.001332,openrouter_usage,1.8,stop,True
+Handler5272,openai/gpt-6-sol,openai/flex,low,OpenAI,hash,True,easy,real_api,ok,real,0.99,True,,1476,115,30,0.00241925,openrouter_usage,2.42,stop,True
+Handler5282,openai/gpt-6-sol,openai/flex,low,OpenAI,ldapi,False,brutal,false_positive,ok,false_positive,0.99,True,,1755,122,26,0.002803,openrouter_usage,2.47,stop,True
+Handler5323,openai/gpt-6-sol,openai/flex,low,OpenAI,xpathi,True,hard,real_dataflow,ok,real,0.99,True,,1505,89,0,0.0023255,openrouter_usage,1.76,stop,True
+Handler5395,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,True,hard,real_dataflow,ok,real,0.99,True,,1055,88,0,0.001758,openrouter_usage,1.8,stop,True
+Handler5722,openai/gpt-6-sol,openai/flex,low,OpenAI,pathtraver,False,hard,false_positive,ok,false_positive,0.99,True,,1496,81,0,0.00227425,openrouter_usage,1.39,stop,True
+Handler5813,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,True,easy,real_dataflow,ok,real,0.99,True,,1111,129,43,0.002033,openrouter_usage,2.29,stop,True
+Handler6050,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,False,hard,false_positive,ok,false_positive,0.99,True,,1116,100,21,0.00189425,openrouter_usage,2.54,stop,True
+Handler6075,openai/gpt-6-sol,openai/flex,low,OpenAI,cmdi,True,hard,real_dataflow,ok,real,0.99,True,,1430,247,155,0.00302175,openrouter_usage,3.04,stop,True
+Handler6116,openai/gpt-6-sol,openai/flex,low,OpenAI,cmdi,False,hard,false_positive,ok,false_positive,0.99,True,,1626,124,35,0.00265175,openrouter_usage,2.87,stop,True
+Handler6183,openai/gpt-6-sol,openai/flex,low,OpenAI,hash,True,easy,real_api,ok,real,0.99,True,,1469,107,25,0.0023705,openrouter_usage,2.21,stop,True
+Handler6359,openai/gpt-6-sol,openai/flex,low,OpenAI,weakrand,True,easy,real_api,ok,real,0.99,True,,1618,81,0,0.00242675,openrouter_usage,1.69,stop,True
+Handler6396,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,True,hard,real_dataflow,ok,real,0.99,True,,1222,77,0,0.00191175,openrouter_usage,1.3,stop,True
+Handler6472,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,False,hard,false_positive,ok,false_positive,0.99,True,,997,92,23,0.001457,openrouter_usage,2.05,stop,True
+Handler6540,openai/gpt-6-sol,openai/flex,low,OpenAI,pathtraver,False,hard,false_positive,ok,false_positive,0.99,True,,1199,128,30,0.002138,openrouter_usage,3.1,stop,True
+Handler6650,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,False,brutal,false_positive,ok,false_positive,0.99,True,,1315,100,18,0.002143,openrouter_usage,1.61,stop,True
+Handler6775,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,False,easy,false_positive,ok,false_positive,0.99,True,,1166,117,30,0.00204175,openrouter_usage,2.93,stop,True
+Handler6833,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,True,hard,real_dataflow,ok,real,0.99,True,,1201,94,15,0.0019705,openrouter_usage,1.49,stop,True
+Handler6881,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,True,easy,real_dataflow,ok,real,0.99,True,,1028,121,31,0.00188925,openrouter_usage,2.21,stop,True
+Handler7056,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,False,hard,false_positive,ok,false_positive,0.99,True,,1095,92,16,0.001828,openrouter_usage,1.59,stop,True
+Handler7109,openai/gpt-6-sol,openai/flex,low,OpenAI,crypto,True,easy,real_api,ok,real,0.99,True,,1892,118,31,0.00295425,openrouter_usage,2.72,stop,True
+Handler7317,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,False,easy,false_positive,ok,false_positive,0.98,True,,1132,105,25,0.00193925,openrouter_usage,2.52,stop,True
+Handler7456,openai/gpt-6-sol,openai/flex,low,OpenAI,pathtraver,False,hard,false_positive,ok,false_positive,0.99,True,,1554,121,32,0.00254675,openrouter_usage,2.23,stop,True
+Handler7486,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,True,hard,real_dataflow,ok,real,0.99,True,,1553,105,17,0.0024655,openrouter_usage,1.62,stop,True
+Handler7840,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,False,hard,false_positive,ok,false_positive,0.99,True,,1090,119,29,0.00195675,openrouter_usage,2.29,stop,True
+Handler7916,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,False,hard,false_positive,ok,false_positive,0.99,True,,1235,110,30,0.002093,openrouter_usage,3.12,stop,True
+Handler7976,openai/gpt-6-sol,openai/flex,low,OpenAI,weakrand,True,easy,real_api,ok,real,0.99,True,,1673,84,0,0.0025105,openrouter_usage,1.74,stop,True
+Handler7982,openai/gpt-6-sol,openai/flex,low,OpenAI,ldapi,True,hard,real_dataflow,ok,real,0.99,True,,1818,135,34,0.00294675,openrouter_usage,2.32,stop,True
+Handler8082,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,True,easy,real_dataflow,ok,real,0.99,True,,1162,81,0,0.00185675,openrouter_usage,1.5,stop,True
+Handler8239,openai/gpt-6-sol,openai/flex,low,OpenAI,trustbound,True,easy,real_dataflow,ok,real,0.99,True,,1171,125,32,0.002088,openrouter_usage,2.01,stop,True
+Handler8243,openai/gpt-6-sol,openai/flex,low,OpenAI,cmdi,False,hard,false_positive,ok,false_positive,0.99,True,,1464,124,34,0.00244925,openrouter_usage,2.41,stop,True
+Handler8264,openai/gpt-6-sol,openai/flex,low,OpenAI,pathtraver,False,brutal,false_positive,ok,false_positive,1.0,True,,1611,87,0,0.002448,openrouter_usage,1.47,stop,True
+Handler8295,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,True,hard,real_dataflow,ok,real,0.99,True,,1150,114,20,0.00200675,openrouter_usage,2.16,stop,True
+Handler8373,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,False,hard,false_positive,ok,false_positive,0.99,True,,948,102,21,0.001458,openrouter_usage,3.02,stop,True
+Handler8449,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,True,easy,real_dataflow,ok,real,0.99,True,,1076,160,67,0.00214425,openrouter_usage,2.62,stop,True
+Handler8450,openai/gpt-6-sol,openai/flex,low,OpenAI,pathtraver,True,easy,real_dataflow,ok,real,0.99,True,,1176,122,28,0.00207925,openrouter_usage,2.62,stop,True
+Handler8504,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,True,hard,real_dataflow,ok,real,0.99,True,,1097,109,24,0.0019155,openrouter_usage,2.0,stop,True
+Handler8770,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,True,easy,real_dataflow,ok,real,0.99,True,,1117,126,33,0.0020255,openrouter_usage,4.49,stop,True
+Handler8806,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,True,brutal,real_dataflow,ok,real,0.99,True,,1305,145,56,0.0023555,openrouter_usage,2.81,stop,True
+Handler9001,openai/gpt-6-sol,openai/flex,low,OpenAI,cmdi,False,brutal,false_positive,ok,false_positive,0.99,True,,1414,109,30,0.00231175,openrouter_usage,2.51,stop,True
+Handler9295,openai/gpt-6-sol,openai/flex,low,OpenAI,xss,False,hard,false_positive,ok,false_positive,0.99,True,,952,113,29,0.001517,openrouter_usage,2.97,stop,True
+Handler9375,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,False,hard,false_positive,ok,false_positive,0.99,True,,1068,109,23,0.00187925,openrouter_usage,2.36,stop,True
+Handler9453,openai/gpt-6-sol,openai/flex,low,OpenAI,pathtraver,False,brutal,false_positive,ok,false_positive,0.99,True,,1535,121,31,0.002523,openrouter_usage,2.42,stop,True
+Handler9566,openai/gpt-6-sol,openai/flex,low,OpenAI,cmdi,False,brutal,false_positive,ok,false_positive,0.99,True,,1489,99,22,0.0023555,openrouter_usage,2.0,stop,True
+Handler9643,openai/gpt-6-sol,openai/flex,low,OpenAI,cmdi,True,easy,real_dataflow,ok,real,0.97,True,,1399,257,171,0.003033,openrouter_usage,3.43,stop,True
+Handler9705,openai/gpt-6-sol,openai/flex,low,OpenAI,xpathi,False,hard,false_positive,ok,false_positive,0.99,True,,1629,96,21,0.0025155,openrouter_usage,2.61,stop,True
+Handler9715,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,True,hard,real_dataflow,ok,real,0.99,True,,1174,115,28,0.00204175,openrouter_usage,2.9,stop,True
+Handler9790,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,True,hard,real_dataflow,ok,real,0.99,True,,1134,82,0,0.00182675,openrouter_usage,1.36,stop,True
+Handler9797,openai/gpt-6-sol,openai/flex,low,OpenAI,sqli,False,hard,false_positive,ok,false_positive,0.99,True,,1242,108,32,0.00209175,openrouter_usage,2.21,stop,True
+Handler9799,openai/gpt-6-sol,openai/flex,low,OpenAI,securecookie,True,easy,real_api,ok,real,0.99,True,,1225,74,0,0.0019005,openrouter_usage,1.94,stop,True
+Handler9857,openai/gpt-6-sol,openai/flex,low,OpenAI,weakrand,True,easy,real_api,ok,real,0.99,True,,1503,84,0,0.002298,openrouter_usage,2.73,stop,True
+Handler9885,openai/gpt-6-sol,openai/flex,low,OpenAI,crypto,True,brutal,real_api,ok,real,0.99,True,,1948,84,0,0.00285425,openrouter_usage,1.64,stop,True

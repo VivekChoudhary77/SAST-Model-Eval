@@ -15,9 +15,12 @@ from triage.sanitize import PARSER
 UTIL_DIR = config.SANITIZED_DIR / "java/com/acmepay/app/util"
 RESOURCES = config.SANITIZED_DIR / "resources"
 
-# Utils methods that transform data on its way to a sink. Others (printOSCommandResults, commonHeaders,
-# getFileFromClasspath, getInsecureOSCommandString, which returns a fixed script path) are plumbing.
-UTILS_METHODS = ("getCipher", "encodeForHTML", "getOSCommandString")
+# Utils methods that transform data on its way to a sink, or choose what runs. Others (printOSCommandResults,
+# commonHeaders, getFileFromClasspath) are plumbing.
+UTILS_METHODS = ("getCipher", "encodeForHTML", "getOSCommandString", "getScriptCommandString")
+# getScriptCommandString returns the path of one of these scripts; what they do with their environment decides
+# whether attacker-controlled environment variables are exploitable.
+SCRIPTS = ("runCmd.sh", "runCmd.bat")
 
 
 @dataclass
@@ -69,6 +72,11 @@ def blocks_for(code: str) -> list[ContextBlock]:
     if used:
         blocks.append(ContextBlock("com.acmepay.app.util.Utils (referenced methods)",
                                    "\n\n".join(_method("Utils", m) for m in used)))
+    if "getScriptCommandString" in used:
+        for script in SCRIPTS:
+            blocks.append(ContextBlock(f"{script} (resource returned by getScriptCommandString)",
+                                       (RESOURCES / script).read_text().strip(),
+                                       "bat" if script.endswith(".bat") else "sh"))
     return blocks
 
 

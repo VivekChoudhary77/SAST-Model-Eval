@@ -1,0 +1,6 @@
+model,correct_of_100,real_bugs_kept_of_50,false_alarms_closed_of_50,unanswered,cost_per_month_usd,cost_per_month_batch_usd,within_budget,false_alarms_closed_at_98pct_recall,ci95_low,ci95_high,auto_close_threshold,avg_reasoning_tokens,reasoning_effort,endpoint
+deepseek/deepseek-v4-pro,97,50,50,3,13.4,,True,1.0,1.0,1.0,0.95,603.0,high,baidu/fp8
+z-ai/glm-5.3,95,50,45,0,12.69,14.8,True,0.9,0.82,0.98,0.85,21.0,low,sail-research/us
+anthropic/claude-sonnet-5.5,100,50,50,0,116.29,58.15,True,1.0,1.0,1.0,0.93,0.0,low,google-vertex/global
+x-ai/grok-4.7,99,49,50,0,115.43,,True,1.0,0.96,1.0,0.86,387.1,low,xai/zdr
+openai/gpt-6-sol,100,50,50,0,39.42,33.91,True,1.0,1.0,1.0,0.98,26.0,low,openai/flex

@@ -9,7 +9,7 @@ get a proportional share; rows are drawn with the fixed seed.
 Outputs:
   golden/golden_set.csv                         IDs, labels, tiers, flagged lines (committed, no code)
   data/prompts/<handler>.txt, _system.txt       rendered prompts (gitignored)
-  results/golden_summary.json                   composition, prompt sizes, prompt leak scan (committed)
+  results/run_log.json [golden]                 composition, prompt sizes, prompt leak scan (committed)
 """
 
 import json
@@ -21,7 +21,7 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import config  # noqa: E402
-from triage import leaks, prompts  # noqa: E402
+from triage import leaks, prompts, runlog  # noqa: E402
 
 
 def allocate(counts: pd.Series, n: int, minimum: int = 0) -> pd.Series:
@@ -103,7 +103,7 @@ def main() -> None:
         "approx_input_tokens_mean": round((system_chars + chars.mean()) / 3.5),
         "prompt_leak_scan": {name: len(hits) for name, hits in leak_hits.items()},
     }
-    (config.RESULTS_DIR / "golden_summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+    runlog.write("golden", summary)
 
     pd.set_option("display.width", 200)
     print(f"Golden set: {len(golden)} items -> {config.GOLDEN_DIR / 'golden_set.csv'}")

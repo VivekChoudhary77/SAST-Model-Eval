@@ -7,7 +7,7 @@ with sync cost (what the eval pays) and batch cost (a production option) in sepa
 
 Outputs (committed):
   results/pricing.csv           model, slot, open weights, pinned endpoint, sync and batch $/M tokens
-  results/cost_projection.csv   $/alert and $/month at the scenario volume (only after the smoke test)
+  results/run_log.json [cost_projection]  $/alert and $/month at the scenario volume (after the smoke test)
 """
 
 import sys
@@ -19,7 +19,9 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import config  # noqa: E402
+from triage import runlog  # noqa: E402
 from triage.client import resolve_effort  # noqa: E402
+from triage.runner import measured_usage  # noqa: E402
 
 API = config.OPENROUTER_BASE_URL
 PER_M = 1e6
@@ -54,12 +56,8 @@ def pick_endpoint(model: str, est_in: float, est_out: float, current: str | None
 
 
 def measured_tokens() -> dict[tuple[str, str], tuple[float, float]]:
-    """Mean (input, output) tokens per alert for each (model, endpoint) in the smoke test."""
-    smoke = config.RESULTS_DIR / "smoke_test.csv"
-    if not smoke.exists():
-        return {}
-    df = pd.read_csv(smoke)
-    df = df[df.status == "ok"]
+    """Mean (input, output) tokens per alert for each (model, endpoint): full eval, else smoke test."""
+    df = measured_usage()
     return {k: (g.prompt_tokens.mean(), g.completion_tokens.mean()) for k, g in df.groupby(["model", "endpoint"])}
 
 
@@ -116,8 +114,10 @@ def main() -> None:
         proj[f"monthly_sync_x{mult}"] = proj.sync_per_alert * config.ALERTS_PER_MONTH * mult
         proj[f"monthly_batch_x{mult}"] = proj.batch_per_alert * config.ALERTS_PER_MONTH * mult
     proj["within_budget_sync_x1"] = proj.monthly_sync_x1 <= config.MONTHLY_BUDGET_USD
-    if (config.RESULTS_DIR / "smoke_test.csv").exists():
-        proj.to_csv(config.RESULTS_DIR / "cost_projection.csv", index=False)
+    if measured:
+        keep = ["model", "endpoint", "tokens_in", "tokens_out", "token_basis", "sync_per_alert", "batch_per_alert"] + \
+               [c for c in proj.columns if c.startswith("monthly_")] + ["within_budget_sync_x1"]
+        runlog.write("cost_projection", proj[keep].round(6).to_dict("records"))
 
     pd.set_option("display.width", 250)
     print(f"Prices fetched {fetched}\n")

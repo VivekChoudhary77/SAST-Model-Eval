@@ -13,3 +13,4 @@ prompts/
 
 # Raw model responses and spend ledger (responses can quote code)
 cache/
+explanation.md

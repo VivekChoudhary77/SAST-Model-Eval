@@ -73,3 +73,5 @@ RETRY_BASE_DELAY_S = 2.0
 REQUEST_TIMEOUT_S = 300
 CHARS_PER_TOKEN_ESTIMATE = 3.0                # conservative (code tokenizes densely); only for pre-call estimates
 PRICING_CSV = RESULTS_DIR / "pricing.csv"
+ANSWERS_CSV = RESULTS_DIR / "answers.csv"     # every model answer in the full eval (no code)
+RESULTS_CSV = RESULTS_DIR / "results.csv"     # one row per model: the results table
